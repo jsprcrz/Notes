@@ -1,0 +1,37 @@
+# Project information
+site_name: Jasper Cruz | Notes
+site_description: Notes for courses taken in Ryerson University
+site_author: Jasper Cruz
+site_url: https://jsprcrz.github.io/Notes
+
+# Repository
+repo_name: jsprcrz/Notes
+repo_url: https://github.com/jsprcrz/Notes
+
+# Configuration
+theme:
+  name: material
+  language: en
+  favicon: assets/favicon.png
+  palette:
+    primary: teal
+    accent: blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: fontawesome/solid/earth-americas
+    repo: fontawesome/brands/github
+  feautures:
+    - search.suggest
+    - serach.highlight
+    - content.tabs.link
+
+plugins:
+  - search
+
+# Directory
+nav:
+  - Notes: "index.md"
+  - Term:
+      - Winter 2022: "W2022/note.md"
