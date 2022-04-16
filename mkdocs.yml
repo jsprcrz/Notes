@@ -1,5 +1,5 @@
 # Project information
-site_name: Jasper Cruz | Notes
+site_name: Notes
 site_description: Notes for courses taken in Ryerson University
 site_author: Jasper Cruz
 site_url: https://jsprcrz.github.io/Notes
@@ -30,8 +30,19 @@ theme:
 plugins:
   - search
 
+extra:
+  social:
+    - icon: fontawesome/brands/github-square
+      link: https://github.com/jsprcrz
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jasper-cruz
+  analytics:
+    provider: google
+    property: G-SR44P16LQ4
+
 # Directory
 nav:
-  - Notes: "index.md"
+  - Preface: "index.md"
   - Term:
-      - Winter 2022: "W2022/note.md"
+      - Winter 2022: "Term/W2022.md"
+      - Fall 2021: "Term/F2021.md"
