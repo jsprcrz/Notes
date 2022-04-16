@@ -1,6 +1,6 @@
 # Project information
 site_name: Notes
-site_description: Notes for courses taken in Ryerson University
+site_description: A collection of notes I made for the courses I've taken in Ryerson University
 site_author: Jasper Cruz
 site_url: https://jsprcrz.github.io/Notes
 
@@ -14,8 +14,8 @@ theme:
   language: en
   favicon: assets/favicon.png
   palette:
-    primary: teal
-    accent: blue
+    primary: black
+    accent: black
   font:
     text: Roboto
     code: Roboto Mono
@@ -37,7 +37,7 @@ extra:
   analytics:
     provider: google
     property: G-SR44P16LQ4
-  generator: false
+  generator: true
 
 copyright: Jasper Cruz
 
