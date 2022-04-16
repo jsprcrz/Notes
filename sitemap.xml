@@ -2,12 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsprcrz.github.io/Notes/</loc>
-         <lastmod>2022-04-15</lastmod>
+         <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsprcrz.github.io/Notes/W2022/note/</loc>
-         <lastmod>2022-04-15</lastmod>
+         <loc>https://jsprcrz.github.io/Notes/Term/F2021/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsprcrz.github.io/Notes/Term/W2021/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsprcrz.github.io/Notes/Term/W2022/</loc>
+         <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
