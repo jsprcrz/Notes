@@ -1,6 +1,6 @@
 # Introduction
 
-Listed below are all the collections of notes taken for the courses I've took.
+Listed below are the collections of notes taken from the courses I've took.
 
 <div align="center">
   <img src="https://img.shields.io/badge/GitHub%20Pages-121011.svg?logo=github&style=flat-square">
