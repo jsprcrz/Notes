@@ -1,0 +1,3199 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of notes I made for the courses I've taken in Ryerson University">
+      
+      
+        <meta name="author" content="Jasper Cruz">
+      
+      
+        <link rel="canonical" href="https://jsprcrz.github.io/Notes/W2022/ELE404/ELE404/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>ELE404 - Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/katex.css">
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-SR44P16LQ4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-SR44P16LQ4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SR44P16LQ4"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#diodes-and-their-application" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ELE404
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jsprcrz/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jsprcrz/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
+
+    </a>
+    Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jsprcrz/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jsprcrz/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Preface
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Term
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Term" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Term
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Term/W2022/" class="md-nav__link">
+        Winter 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Term/F2021/" class="md-nav__link">
+        Fall 2021
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Term/W2021/" class="md-nav__link">
+        Winter 2021
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Notes (WIP)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Notes (WIP)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Notes (WIP)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Winter 2022
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Winter 2022" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Winter 2022
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COE428/COE428/" class="md-nav__link">
+        COE428
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MTH314/MTH314/" class="md-nav__link">
+        MTH314
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ELE404
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ELE404
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#semiconductors" class="md-nav__link">
+    Semiconductors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-of-diodes" class="md-nav__link">
+    Application of Diodes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#semiconductors" class="md-nav__link">
+    Semiconductors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-of-diodes" class="md-nav__link">
+    Application of Diodes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/jsprcrz/Notes/edit/master/docs/W2022/ELE404/ELE404.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  
+
+
+
+<details class="introduction">
+<summary>Introduction</summary>
+<p>This will cover various topics for the course ELE404: Electronic Circuits I, using the textbook, <em>Microelectronic Circuits</em>, by A. Sedra, K. Smith, T. Carusone, and V. Gaunet, and lectures notes provided by the professor, Dr. Fei Yuan.</p>
+<p>Other resources used:</p>
+<ul>
+<li>The textbook, <em>Electronic Devices (Electron Flow Version)</em> , by T. Floyd</li>
+</ul>
+</details>
+<div align="center">
+  <img src = "https://img.shields.io/badge/Winter-2022-blue">
+  <img src = "https://img.shields.io/badge/Ryerson-University-yellow">
+</div>
+
+<p>Last Updated: 2022-04-17</p>
+<h1 id="diodes-and-their-application">Diodes and Their Application<a class="headerlink" href="#diodes-and-their-application" title="Permanent link">&para;</a></h1>
+<h2 id="semiconductors">Semiconductors<a class="headerlink" href="#semiconductors" title="Permanent link">&para;</a></h2>
+<p>The first few topics covered in beginning of the module, might be reminiscent of topics covered in PCS224, so it won't go to in-depth. As a recap, a link to the notes from Fall 2021:
+<a href="https://drive.google.com/drive/folders/1fbuvJ2OzbYCaQcRKkNcWf6e-37evOWxH?usp=sharing"></a></p>
+<h2 id="application-of-diodes">Application of Diodes<a class="headerlink" href="#application-of-diodes" title="Permanent link">&para;</a></h2>
+<p>We will now go over the actual application of diodes and ways to analyze them.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Diode Rectifier and Filter One of the most
+important applications of diodes is in the design of rectifier
+circuitsconvert an AC voltage to a DC voltage. There's two types:
+half-wave and full-wave rectifier.</p>
+<p>::: center
+<img alt="image" src="../Figure/1/dc_power.png" width="80%" />
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Half-Wave Rectifier The half-wave rectifier
+utilizes alternate half-cycles of the input sinusoid. The circuit is
+shown below.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/hw1_rectifier.png" />
+:::</p>
+<p>The circuit functions as follows:</p>
+<dl>
+<dt>Positive Cycle:</dt>
+<dd>
+<p>When <span class="arithmatex">\(v_{in} \geq v_D\)</span>, the output voltage <span class="arithmatex">\(v_O = v_{in} - v_D\)</span>, due
+to the constant-voltage-drop diode.</p>
+</dd>
+<dt>Negative Cycle:</dt>
+<dd>
+<p>When <span class="arithmatex">\(v_{in} &lt; v_D\)</span>, the output voltage <span class="arithmatex">\(v_O = 0\)</span>, since the diode
+is reverse-biased.</p>
+</dd>
+</dl>
+<p>Note that for an ideal diode, the voltage drop would be <span class="arithmatex">\(v_D = 0\)</span>, as
+shown in the left. However, since these do not actually exists, we use a
+more realistic model, as shown in the right.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/1/hw_graph.png" />
+:::</p>
+<p>As you can see in the graph, a half-wave rectifier has a low energy
+efficiency as half of the input is wasted.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Half-Wave Rectifier with a Filter Capacitor
+In order to filter out the ripples, a large capacitor <span class="arithmatex">\(C\)</span> is
+neededreducing the substantially the variations in the rectifier output
+voltage <span class="arithmatex">\(v_O\)</span>. The circuit is shown below</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/hw2_rectifier.png" />
+:::</p>
+<p>As a result, when <span class="arithmatex">\(v_{in}\)</span> drops from its peak, the capacitor will
+discharge, instead of a dropping all the way to <span class="arithmatex">\(\SI{0}{\volt}\)</span>.</p>
+<p>::: center
+<img alt="image" src="../Figure/1/hwc_graph.png" width="7cm" />
+:::</p>
+<p>A closer look at the output voltage, we can derive a few equations. The
+peak voltage <span class="arithmatex">\(V_P\)</span> is the maximum value of the DC source, where
+<span class="arithmatex">\(<span class="arithmatex">\(V_P = v_{in,\ max} - v_D\)</span>\)</span> The ripple voltage <span class="arithmatex">\(V_r\)</span> is the residual
+periodic variation of the DC voltagethe difference between <span class="arithmatex">\(V_P\)</span> and the
+voltage when discharging ends.
+<span class="arithmatex">\(<span class="arithmatex">\(V_r = \frac{T}{\tau}V_P = \frac{V_P}{fR_LC} = \frac{i_L}{fC}\)</span>\)</span> The
+output DC voltage <span class="arithmatex">\(\overline{v_O}\)</span> can be obtained by taking the average
+of the extreme values of <span class="arithmatex">\(v_O\)</span>.
+<span class="arithmatex">\(<span class="arithmatex">\(\overline{v_O} = V_P - \frac{1}{2}V_r\)</span>\)</span></p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Full-Wave Rectifier The full-wave rectifier
+has improve efficiency, by utilizing both halves of the sinusoid. The
+circuit is shown below.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/fw1_rectifier.png" />
+:::</p>
+<p>The circuit functions as follows:</p>
+<dl>
+<dt>Positive Cycle:</dt>
+<dd>
+<p>When <span class="arithmatex">\(v_{in} \geq v_D\)</span>, the upper diode <span class="arithmatex">\(D_1\)</span> will be ON, while
+lower diode <span class="arithmatex">\(D_2\)</span> will be OFF, and the output voltage
+<span class="arithmatex">\(v_O = v_{in} - v_D\)</span>.</p>
+</dd>
+<dt>Negative Cycle:</dt>
+<dd>
+<p>When <span class="arithmatex">\(v_{in} \leq -v_D\)</span>, the upper diode <span class="arithmatex">\(D_1\)</span> will be OFF, while
+lower diode <span class="arithmatex">\(D_2\)</span> will be ON, and the output voltage
+<span class="arithmatex">\(v_O = |v_{in}| - v_D\)</span>.</p>
+</dd>
+</dl>
+<p>::: center
+<img alt="image" src="../Figure/1/fw_current.png" width="90%" />
+:::</p>
+<p>The output voltage is shown below.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/1/fw_graph.png" />
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Full-Wave Rectifier with a Filter Capacitor
+Likewise, a large shunt capacitor is used to filter out voltage ripples.
+The circuit is shown below.</p>
+<p>::: center
+<img alt="image" height="3.25cm" src="../Figure/1/fw2_rectifier.png" />
+:::</p>
+<p>The only notable difference that can be seen from the graph is the
+period <span class="arithmatex">\(T\)</span> cut in half.</p>
+<p>::: center
+<img alt="image" src="../Figure/1/fwc_graph.png" width="7cm" />
+:::</p>
+<p>The peak voltage <span class="arithmatex">\(V_P\)</span> is still the same as previously shown, where
+<span class="arithmatex">\(<span class="arithmatex">\(V_P = v_{in,\ max} - v_D\)</span>\)</span> For the ripple voltage <span class="arithmatex">\(V_r\)</span>, the period
+<span class="arithmatex">\(T\)</span> is replaced by <span class="arithmatex">\(T/2\)</span> or <span class="arithmatex">\(2f\)</span>, resulting in
+<span class="arithmatex">\(<span class="arithmatex">\(V_r = \frac{V_P}{2fR_LC} = \frac{i_L}{2fC}\)</span>\)</span> As in the half-wave case,
+the output DC voltage <span class="arithmatex">\(\overline{v_O}\)</span> doesn't change.
+<span class="arithmatex">\(<span class="arithmatex">\(\overline{v_O} = V_P - \frac{1}{2}V_r\)</span>\)</span></p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Bridge Rectifier A cheaper implementation of
+the full-wave rectifier with no center-tapped transformer. However, it
+uses two diodes in conjunction, resulting in a bigger voltage loss. The
+circuit is shown below.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/b1_rectifier.png" />
+:::</p>
+<p>The circuit functions as follows:</p>
+<dl>
+<dt>Positive Cycle:</dt>
+<dd>
+<p>When <span class="arithmatex">\(v_{in} \geq 2v_D\)</span>, the diodes <span class="arithmatex">\(D_1\)</span>, <span class="arithmatex">\(D_2\)</span> will be ON, while
+diodes <span class="arithmatex">\(D_3\)</span>, <span class="arithmatex">\(D_4\)</span> will be OFF, and the output voltage
+<span class="arithmatex">\(v_O = v_{in} - 2v_D\)</span>.</p>
+</dd>
+<dt>Negative Cycle:</dt>
+<dd>
+<p>When <span class="arithmatex">\(v_{in} \leq 2v_D\)</span>, the diodes <span class="arithmatex">\(D_1\)</span>, <span class="arithmatex">\(D_2\)</span> will be OFF, while
+diodes <span class="arithmatex">\(D_3\)</span>, <span class="arithmatex">\(D_4\)</span> will be ON, and the output voltage
+<span class="arithmatex">\(v_O = |v_{in}| - 2v_D\)</span>.</p>
+</dd>
+</dl>
+<p>::: center
+<img alt="image" src="../Figure/1/b_current.png" width="\textwidth" />
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Bridge Rectifier with a Filter Capacitor
+Let's apply a capacitor again to filter out the ripples. The circuit is
+shown below.</p>
+<p>::: center
+<img alt="image" height="3.25cm" src="../Figure/1/b2_rectifier.png" />
+:::</p>
+<p>Like the full-wave rectifier, the period is also half <span class="arithmatex">\(T/2\)</span> of the input
+wave.</p>
+<p>::: center
+<img alt="image" src="../Figure/1/fwc_graph.png" width="7cm" />
+:::</p>
+<p>However, the peak voltage has a bigger voltage loss of <span class="arithmatex">\(2v_D\)</span> due to the
+two diodes. <span class="arithmatex">\(<span class="arithmatex">\(V_P = v_{in,\ max} - 2v_D\)</span>\)</span> The ripple voltage <span class="arithmatex">\(V_r\)</span> is
+the same as stated in the full-wave rectifier
+<span class="arithmatex">\(<span class="arithmatex">\(V_r = \frac{V_P}{2fR_LC} = \frac{i_L}{2fC}\)</span>\)</span> The same case for the
+output DC voltage <span class="arithmatex">\(\overline{v_O}\)</span> which also doesn't change.
+<span class="arithmatex">\(<span class="arithmatex">\(\overline{v_O} = V_P - \frac{1}{2}V_r\)</span>\)</span></p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Voltage Regulator A voltage regulator is a
+circuit whose purpose is to provide a constant DC voltage between its
+output terminalsto further reduce the voltage ripple.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Resistor-based Voltage Regulator The
+resistor-based voltage regulator is not the most ideal as you'll see
+why. The circuit is shown below</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/1/resistor_vr.png" />
+:::</p>
+<p>The output voltage <span class="arithmatex">\(v_O\)</span> is given by
+<span class="arithmatex">\(<span class="arithmatex">\(v_O = \frac{R_L \parallel R_2}{R_L \parallel R_2 + R_1}V_{CC}\)</span>\)</span> For an
+ideal voltage regulator, we want <span class="arithmatex">\(v_O\)</span> to be independent of <span class="arithmatex">\(R_L\)</span>, as
+it's something we have no control over. Though one may consider the case
+if <span class="arithmatex">\(R_L \gg R_1, R_2\)</span>, then <span class="arithmatex">\(R_L \parallel R_2 \approx R_2\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(v_O \approx \frac{R_2}{R_1 + R_2}V_{CC}\)</span>\)</span> While <span class="arithmatex">\(v_O\)</span> is independent
+of <span class="arithmatex">\(R_L\)</span>, there are still some flaws in the design:</p>
+<p>(1) It is still proportional to <span class="arithmatex">\(V_{CC}\)</span>resulting in <span class="arithmatex">\(v_O\)</span> fluctuating
+    based on <span class="arithmatex">\(V_{CC}\)</span></p>
+<p>(2) Since <span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span> is very small, a very large current will flow
+    through them; resulting in a rapid increase of temperature and
+    smoke.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Diode-based Voltage Regulator Suppose we now
+replace <span class="arithmatex">\(R_2\)</span> with a forward-biased diode, as shown below.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/1/diode_vr.png" />
+:::</p>
+<p>If you recall, the equivalent of a forward-biased diode is to a small
+voltage source <span class="arithmatex">\(\SI{0.7}{\volt}\)</span> in series with small resistance <span class="arithmatex">\(r_D\)</span>.
+The ideal output voltage <span class="arithmatex">\(v_O\)</span> is given by <span class="arithmatex">\(<span class="arithmatex">\(v_O = 0.7N\)</span>\)</span> where <span class="arithmatex">\(N\)</span> is
+the number of diodes cascaded and <span class="arithmatex">\(r_D = \SI{0}{\ohm}\)</span>. Note that
+<span class="arithmatex">\(V_{CC} &gt; 0.7N\)</span> is required. However, the actual value of <span class="arithmatex">\(v_O\)</span> is
+determined by including <span class="arithmatex">\(r_D\)</span>. By performing KCL at node <span class="arithmatex">\(v_O\)</span>, we get
+<span class="arithmatex">\(<span class="arithmatex">\(G_L(v_O) + G(v_O - V_{CC}) + g_D(v_O - 0.7) = 0\)</span>\)</span> Note that the
+resistance is converted to conductance to minimize the use of fraction,
+where
+<span class="arithmatex">\(<span class="arithmatex">\(G = \frac{1}{R} \to G_L =  \frac{1}{R_L} \text{ and } g_D = \frac{1}{r_D}\)</span>\)</span>
+Isolating for <span class="arithmatex">\(v_O\)</span>, we get the actual output voltage which is given by
+<span class="arithmatex">\(<span class="arithmatex">\(v_O \approx 0.7 \bigg[1 + \frac{GV_{CC}}{0.7g_D} - \frac{G_L + G}{g_D}\bigg]\)</span>\)</span>
+We can determine the sensitivity of <span class="arithmatex">\(v_O\)</span> to <span class="arithmatex">\(R_L\)</span> and <span class="arithmatex">\(V_{CC}\)</span> to see
+how much it fluctuates by
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{dv_O}{dR_L} = \frac{0.7}{g_D} = 0.7r_D \hspace{4cm} \frac{dv_O}{dV_{CC}} = \frac{G}{g_D} = \frac{r_D}{R}\)</span>\)</span>
+Since <span class="arithmatex">\(r_D\)</span> is typically a small value, where <span class="arithmatex">\(r_D \ll R, R_L\)</span> or
+<span class="arithmatex">\(g_D \gg G, G_L\)</span>, the output voltage is less sensitive to both <span class="arithmatex">\(V_{CC}\)</span>
+and <span class="arithmatex">\(R_L\)</span>, thus making it a good voltage regulator.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Zener-diode-based Voltage Regulator Let's
+now consider a Zener diode, which is reverse-biased, as shown below.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/1/zener_vr.png" />
+:::</p>
+<p>Likewise, we can also draw the equivalent circuit of a Zener diode as
+such. Then by performing KCL at node <span class="arithmatex">\(v_O\)</span>, we get
+<span class="arithmatex">\(<span class="arithmatex">\(G_Lv_O + G(v_O - V_{CC}) + g_Z(v_O - V_{Z0}) = 0\)</span>\)</span> and isolating for
+<span class="arithmatex">\(v_O\)</span>, the actual output voltage is given by
+<span class="arithmatex">\(<span class="arithmatex">\(v_O \approx V_{Z0}\bigg[1 + \frac{GV_{CC}}{V_{Z0}g_Z} - \frac{G_L + G}{g_Z}\bigg]\)</span>\)</span>
+The sensitivity of <span class="arithmatex">\(v_O\)</span> to <span class="arithmatex">\(R_L\)</span> and <span class="arithmatex">\(V_{CC}\)</span> are
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{dv_O}{dG_L} = -\frac{V_{Z0}}{g_Z} = -V_{Z0}r_Z \hspace{4cm} \frac{dv_O}{dV_{CC}} = -\frac{G}{g_Z} = \frac{r_Z}{R}\)</span>\)</span>
+If you notice, the sensitivity of <span class="arithmatex">\(v_O\)</span> for forward-bias and Zener diode
+are almost identical, so how exactly do we determine which is better?</p>
+<p>::: center
+<img alt="image" height="4.5cm" src="../Figure/1/diode_comparison.png" />
+:::</p>
+<p>If we were to compare the slope side-by-side, you will notice that
+<span class="arithmatex">\(g_Z \gg g_D\)</span>, which means there's less fluctuations when using a Zener
+diode voltage regulator oppose to a forward-biased diode.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Limiting and Clamping Circuits In this
+section, we will present other circuit applications of diodes apart from
+rectifier circuits.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Voltage Clipper As the name suggest, it
+takes an input waveform and clips or cuts off its top half, bottom half
+or both halves depending on the orientation and number of diode.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/volt1_clippers.png" />
+:::</p>
+<p>The circuit works by alternating between the two diodes in forward and
+reverse-bias, resulting in both halves being clipped. The sinusoidal
+wave is displayed below.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/1/voltclip_graph.png" />
+:::</p>
+<p>A few other variety of basic limiting circuits with respect to its
+transfer characteristics:</p>
+<p>::: center
+<img alt="image" src="../Figure/1/volt2_clippers.png" width="85%" />
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Peak Detector A peak detector is used to
+detect maximum value of the input voltage. The circuit looks similar to
+that of a half-wave rectifier, just without a load connected onto.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/peak_detector.png" />
+:::</p>
+<p>Since there's no load to discharge on, the output voltage <span class="arithmatex">\(v_O\)</span> remains
+constant. It will only rise when in forward-biased and there exists a
+<span class="arithmatex">\(v_{in} &gt; v_O\)</span>. The sinusoidal wave is displayed below.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/1/peak_graph.png" />
+:::</p>
+<p>Keep in mind, we assumed the diode is an ideal diode. For an actual
+diode, there will be some voltage drop <span class="arithmatex">\(v_D\)</span> across the peak. Similar to
+a real half-wave rectifier, as discussed previously.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Voltage Doubler The last application of
+diode which will cover is a voltage doubler.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/volt1_doubler.png" />
+:::</p>
+<p>The circuit can be broken down into two sections: the positive and
+negative phase.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/volt2_doubler.png" />
+:::</p>
+<p>During the negative phase, <span class="arithmatex">\(D_1\)</span> will be ON and <span class="arithmatex">\(D_2\)</span> will be OFF, which
+leaves the capacitor <span class="arithmatex">\(C_1\)</span> to charge up.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/1/volt3_doubler.png" />
+:::</p>
+<p>Then when it enters the positive phase, <span class="arithmatex">\(D_1\)</span> will be OFF and <span class="arithmatex">\(D_2\)</span> will
+be ON, the output voltage <span class="arithmatex">\(V_O\)</span> is the sum of the input voltage and the
+voltage of <span class="arithmatex">\(C_1\)</span> obtained in the previous half cycle.</p>
+<h1 id="bipolar-junction-transistors">Bipolar Junction Transistors<a class="headerlink" href="#bipolar-junction-transistors" title="Permanent link">&para;</a></h1>
+<p>A bipolar transistor is a semiconductor device commonly used for
+amplificationbipolar as in both holes and electrons serve as current
+carriers.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Structure of BJT They are of two types of
+bipolar junction transistors (BJTs) namely;</p>
+<ol>
+<li>
+<p>NPN transistor</p>
+<p>::: center
+<img alt="image" height="2.75cm" src="../Figure/2/npn.png" />
+:::</p>
+</li>
+<li>
+<p>PNP transistor</p>
+<p>::: center
+<img alt="image" height="2.75cm" src="../Figure/2/pnp.png" />
+:::</p>
+</li>
+</ol>
+<p>::: list</p>
+<p>The direction of the arrow in the transistor symbol (between base and
+emitter) tells you the direction of current.
+:::</p>
+<p>The BJT consists of three differently doped semiconductor region: the
+emitter region (e), the base region (b), and the collector region (c).</p>
+<dl>
+<dt>Emitter:</dt>
+<dd>
+<p><span class="arithmatex">\(n^+\)</span> for NPN transistors and <span class="arithmatex">\(p^+\)</span> for PNP transistors.</p>
+</dd>
+<dt>Base:</dt>
+<dd>
+<p><span class="arithmatex">\(p\)</span> for NPN transistors and <span class="arithmatex">\(n\)</span> for PNP transistors.</p>
+</dd>
+<dt>Collector:</dt>
+<dd>
+<p><span class="arithmatex">\(n\)</span> for NPN transistor and <span class="arithmatex">\(p\)</span> for PNP transistors.</p>
+</dd>
+</dl>
+<p>If you notice the width is not symmetrical due to the doping ratios,
+where the emitter is heavily doped, the collector is moderately doped
+and the base is lightly doped.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Operation of BJT If you notice from the diagram
+earlier, the transistor consists of two pn junctions, the emitter--base
+junction (EBJ) and the collector--base junction (CBJ). Depending on the
+bias condition of each of these junctions, different modes of operation
+of the BJT are obtained, as shown below.</p>
+<p>::: tabu
+c c c <strong>Mode</strong> &amp; <strong>Emitter-Base Junction</strong> &amp; <strong>Collector-Base
+Junction</strong>\
+Cut-Off &amp; Reverse &amp; Reverse\
+Active &amp; Forward &amp; Reverse\
+Saturation &amp; Forward &amp; Forward\
+:::</p>
+<p>Let's define the bias conditions for modes of operation in the EBJ.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/voltage_source.png" />
+:::</p>
+<p>The order of subscript matter, which implies the order in which they are
+calculated. For NPN, <span class="arithmatex">\(V_{BE} = V_B - V_E\)</span>, whereas for PNP,
+<span class="arithmatex">\(V_{EB} = V_E - V_B\)</span>. Likewise, the same implies for <span class="arithmatex">\(V_{CB}\)</span> and
+<span class="arithmatex">\(V_{BC}\)</span>.</p>
+<dl>
+<dt>Forward Bias:</dt>
+<dd>
+<p>When <span class="arithmatex">\(V_{BE} &gt; \SI{0.7}{\volt}\)</span> or <span class="arithmatex">\(V_{EB} &gt; \SI{0.7}{\volt}\)</span>,
+electrons or holes in the emitter will exit and move to the base or
+collector.</p>
+</dd>
+<dt>Reverse Bias:</dt>
+<dd>
+<p>When <span class="arithmatex">\(V_{BE} &lt; \SI{0.7}{\volt}\)</span> or <span class="arithmatex">\(V_{EB} &lt; \SI{0.7}{\volt}\)</span>, no
+flow of electrons or holes from the emitter to the base or
+collector.</p>
+</dd>
+</dl>
+<p>::: list</p>
+<p>Technically, the diode is forward-biased when <span class="arithmatex">\(V &gt; 0\)</span> and the diode is
+negative biased when <span class="arithmatex">\(V &lt; 0\)</span>. However, we account for the voltage drop
+in diode, in this scenario, which is <span class="arithmatex">\(\SI{0.7}{\volt}\)</span>.
+:::</p>
+<p>Figuratively, we can describe it using the <span class="arithmatex">\(i\)</span>-<span class="arithmatex">\(v\)</span> relationship of the
+emitter-base junction:</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/mode_graph.png" />
+:::</p>
+<p>Note that the small region in between cut-off and active region is not
+the saturation regionwill get to this in a bit. Just know that we do not
+operate in this region.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Cut-Off Mode In cut-off mode, the EBJ is in
+reverse bias (<span class="arithmatex">\(V_{BE} &lt; \SI{0.7}{\volt}\)</span> for NPN and
+<span class="arithmatex">\(V_{EB} &lt; \SI{0.7}{\volt}\)</span> for PNP), which means no emitter current,
+<span class="arithmatex">\(i_E = 0\)</span>. Since <span class="arithmatex">\(<span class="arithmatex">\(i_E = i_C  + i_B\)</span>\)</span> where the emitter current <span class="arithmatex">\(i_E\)</span> is
+equal to the sum of the collector current <span class="arithmatex">\(i_C\)</span> and base current <span class="arithmatex">\(i_B\)</span>.
+We have <span class="arithmatex">\(i_C = 0\)</span> and <span class="arithmatex">\(i_B = 0\)</span>. The transistor is essentially inactive,
+thus appears as an open-circuit.</p>
+<p>::: center
+<img alt="image" src="../Figure/2/cutoff_equiv.png" width="80%" />
+:::</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Active Mode Of the three modes, the active
+mode is the most important. In active mode, the EBJ is in forward bias
+(<span class="arithmatex">\(V_{BE} &gt; \SI{0.7}{\volt}\)</span> for NPN and <span class="arithmatex">\(V_{EB} &gt; \SI{0.7}{\volt}\)</span> for
+PNP) and the CBJ is in reverse bias.</p>
+<p>We'll focus on the NPN transistor, but note that PNP transistor operates
+in the similar manner. As a reminder, current and electron flow are
+backwards:</p>
+<ol>
+<li>
+<p>Since the EBJ is forward-biased (the diode is ON), free electrons
+    from the emitter region can easily cross the emitter-base junction.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/2/active_mode1.png" />
+:::</p>
+</li>
+<li>
+<p>If you remember, the base is lightly doped, so only a small
+    percentage of the free electrons can recombine with the holes in the
+    base region, which produces a small <span class="arithmatex">\(i_B\)</span>.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/2/active_mode2.png" />
+:::</p>
+</li>
+<li>
+<p>The free electrons that entered the base region but didn't recombine
+    with the holes move toward the CBJ which is reverse-biased (the
+    diode is OFF), producing <span class="arithmatex">\(i_C\)</span>, such that <span class="arithmatex">\(i_C \gg i_B\)</span>.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/2/active_mode3.png" />
+:::</p>
+</li>
+</ol>
+<p>::: list</p>
+<p>The collector region is connected to the <span class="arithmatex">\(+\)</span> of <span class="arithmatex">\(V_{CB}\)</span>, so free
+electrons in the base region are attracted to the <span class="arithmatex">\(+\)</span> side and are swept
+across into the collector region, despite the diode being
+reverse-biased. Refer to the zoomed-in diagram in the right.
+:::</p>
+<p>In order to use the BJT as an amplifier, it should be operated in the
+active region. The conceptual circuit for NPN is shown below to
+illustrate the operation of the transistor as an amplifier.</p>
+<p>::: multicols
+2</p>
+<p>::: flushleft
+<img alt="image" height="3.5cm" src="../Figure/2/amplifier_circ1.png" />
+:::</p>
+<p>The total base-emitter voltage becomes <span class="arithmatex">\(<span class="arithmatex">\(v_{BE} = V_{bias} + v_{in}\)</span>\)</span>
+where <span class="arithmatex">\(V_{bias}\)</span> and <span class="arithmatex">\(v_{in}\)</span> are the DC and AC base-emitter voltage
+respectively. Each serve a different purpose.
+:::</p>
+<p>The DC voltage, <span class="arithmatex">\(V_{bias} &gt; \SI{0.7}{\volt}\)</span>, allows us to operate where
+<span class="arithmatex">\(i_C-v_{BE}\)</span> relation is linear. The input signal to be amplified is
+represented by the AC voltage <span class="arithmatex">\(v_{in}\)</span> that is superimposed on
+<span class="arithmatex">\(V_{bias}\)</span>.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/2/amplifier_graph1.png" />
+:::</p>
+<p>We need to perform two types of analysis:</p>
+<ol>
+<li>
+<p>DC analysis, to determine the operating point and ...</p>
+</li>
+<li>
+<p>AC analysis, to determine voltage gain.</p>
+</li>
+</ol>
+<p>In order to do these analysis, we need to model the BJT using two
+transistor models: large-signal equivalent circuit and small-signal
+equivalent circuit.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/2/amplifier_circ2.png" />
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Large-Signal Equivalent Circuit (without
+Base-Width Modulation) We'll begin by only considering the DC component,
+so the small-signal source is eliminated for DC analysis, such that
+<span class="arithmatex">\(v_{BE} = V_{bias}\)</span>.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/2/amplifier_dc.png" />
+:::</p>
+<p>An important thing to make note of, since <span class="arithmatex">\(i_B \ll i_C\)</span>, we have the
+approximation <span class="arithmatex">\(<span class="arithmatex">\(i_E \approx i_C\)</span>\)</span> So you may often see <span class="arithmatex">\(i_C\)</span> and <span class="arithmatex">\(i_E\)</span>
+interchange. The collector current can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:collectorcurrent}
+    i_C \approx I_Se^{v_{BE}/V_t}\)</span>\)</span> If you notice, this is equivalently
+the equation for diode current. The base current can be expressed as a
+fraction of the collector current
+<span class="arithmatex">\(<span class="arithmatex">\(i_B = \frac{i_C}{\beta} = \bigg[\frac{I_S}{\beta}\bigg]e^{v_{BE}/V_t}\)</span>\)</span>
+where <span class="arithmatex">\(\beta\)</span> is a transistor parameter. Note for PNP, replace <span class="arithmatex">\(v_{BE}\)</span>
+with <span class="arithmatex">\(v_{EB}\)</span>. We can form a set of relations between <span class="arithmatex">\(i_C\)</span>, <span class="arithmatex">\(i_B\)</span>, and
+<span class="arithmatex">\(i_E\)</span>: <span class="arithmatex">\(<span class="arithmatex">\(i_C = \alpha i_E \hspace{2cm} i_C = \beta i_B\)</span>\)</span> where <span class="arithmatex">\(\alpha\)</span>
+is related to <span class="arithmatex">\(\beta\)</span> by <span class="arithmatex">\(<span class="arithmatex">\(\alpha = \frac{\beta}{\beta + 1}\)</span>\)</span> We can
+express the emitter current as <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:emitter_nobase}
+    i_E = i_B + i_C = \frac{i_C}{\alpha} = \bigg[\frac{I_S}{\alpha}\bigg]e^{v_{BE}/V_t}\)</span>\)</span></p>
+<p>Thus, the large-signal equivalent circuit of the BJT in active mode
+would look like</p>
+<p>::: center
+<img alt="image" src="../Figure/2/active_equiv1.png" width="80%" />
+:::</p>
+<p>::: list</p>
+<p>This circuit does not account for the base-width modulation, which
+occurs when the connector-emitter voltage is increased. As noted in ,
+the collector current is only affected by <span class="arithmatex">\(v_{BE}\)</span>, but not by <span class="arithmatex">\(v_{CE}\)</span>.
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Large-Signal Equivalent Circuit (with
+Base-Width Modulation) Previously, we assumed that if we increased the
+connector-emitter voltage <span class="arithmatex">\(v_{CE}\)</span>, that the collector current <span class="arithmatex">\(i_C\)</span>
+will remain constant. However, this is not the case as you'll see from
+the <span class="arithmatex">\(i_C\)</span>-<span class="arithmatex">\(v_{CE}\)</span> characteristics of a BJT.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/bw_modulation1.png" />
+:::</p>
+<p>In reality, <span class="arithmatex">\(i_C\)</span> does depends on <span class="arithmatex">\(v_{CE}\)</span>. It varies linearly with
+<span class="arithmatex">\(v_{CE}\)</span>. This is due to the Early effect, which we can derive the
+equation of the slope, by</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/bw_modulation2.png" />
+:::</p>
+<p>So our collector current can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:collectorcurrentbw}
+    i_C \approx I_Se^{v_{BE}/V_t} + I_Se^{v_{BE}/V_t}\bigg[\frac{v_{CE}}{V_A}\bigg] = I_Se^{v_{BE}/V_t}\bigg[1 + \frac{v_{CE}}{V_A}\bigg]\)</span>\)</span>
+Alternatively, the preferred way of writing is expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(i_C \approx I_Se^{v_{BE}/V_t} + g_ov_{CE}\)</span>\)</span> where <span class="arithmatex">\(g_o\)</span> is the output
+conductance
+<span class="arithmatex">\(<span class="arithmatex">\(g_o = \frac{1}{r_o} = \frac{I_Se^{v_{BE}/V_t}}{V_A} \approx \frac{I_C}{V_A}\)</span>\)</span>
+One very important thing to make note of, <span class="arithmatex">\(r_o\)</span> is not a physical
+resistorits intended to quantify the impact of base-width modulation
+onto the circuit; more-so an artificial parameter.</p>
+<p>Thus, the large-signal equivalent circuit of the BJT in active mode
+would now look like</p>
+<p>::: center
+<img alt="image" src="../Figure/2/active_equiv2.png" width="90%" />
+:::</p>
+<p>We'll discuss the small-equivalent circuit in a separate section, as
+they're a lot to talk about.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Saturation Mode In saturation mode, the EBJ
+is in forward bias (<span class="arithmatex">\(V_{BE} &gt; \SI{0.7}{\volt}\)</span> for NPN and
+<span class="arithmatex">\(V_{EB} &gt; \SI{0.7}{\volt}\)</span> for PNP) and the CBJ is in forward bias
+(<span class="arithmatex">\(V_{BC} &gt; \SI{0.7}{\volt}\)</span> for NPN and <span class="arithmatex">\(V_{CB} &gt; \SI{0.7}{\volt}\)</span> for
+PNP).</p>
+<p>The BJT behaves as a resistor in saturation region. Looking back at the
+<span class="arithmatex">\(i_C-v_{CE}\)</span> characteristics of a BJT, the active and saturation region
+is separated by the blue dashed line.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/2/sat_region1.png" />
+:::</p>
+<p>This is the boundary voltage, <span class="arithmatex">\(v_{CE,\, sat}\)</span>, typically around
+<span class="arithmatex">\(\SI{0.1}{\volt}\)</span> to <span class="arithmatex">\(\SI{0.2}{\volt}\)</span>. A closer look at the BJT in
+saturation:</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/2/sat_region2.png" />
+:::</p>
+<p>In deep saturation, a better <span class="arithmatex">\(i_C-v_{CE}\)</span> linear relation exists, where
+<span class="arithmatex">\(v_{CE}\)</span> is smaller. As mentioned earlier, the BJT behaves likes a
+resistor which has a resistance of:
+<span class="arithmatex">\(<span class="arithmatex">\(r_{CE,\, sat} = \frac{1}{\tfrac{di_C}{dv_{CE}}}\)</span>\)</span> A few things to keep
+note of:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(r_{CE,\, sat}\)</span> is a physical resistor, unlike <span class="arithmatex">\(r_o\)</span>, with a small
+    value of a few ohms to a few tens of ohms. In comparison to the
+    output resistance in active mode: <span class="arithmatex">\(r_{CE,\, sat} \ll r_o\)</span>.</p>
+</li>
+<li>
+<p>Increasing <span class="arithmatex">\(v_{BE}\)</span>, increases the slope of <span class="arithmatex">\(i_C-v_{CE}\)</span> relation
+    and <span class="arithmatex">\(r_{CE,\, sat}\)</span> drops.</p>
+</li>
+</ul>
+<p>The resistance, <span class="arithmatex">\(r_{CE,\, sat}\)</span>, is due to the resistance of the emitter
+<span class="arithmatex">\(R_E\)</span> and that of the collector <span class="arithmatex">\(R_c\)</span>, which can be modelled as:</p>
+<p>::: center
+<img alt="image" src="../Figure/2/sat_equiv.png" width="80%" />
+:::</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Design of Amplifiers Previously, we discussed
+the large-signal equivalent circuit, so now we will go over the
+small-signal equivalent. When passing a small-signal, some components
+function differently, as shown below:</p>
+<dl>
+<dt>Linear resistor:</dt>
+<dd>
+<p>The small-signal equivalent circuit of a linear resistor is the
+resistor itself.</p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/2/smequiv_res.png" />
+:::</p>
+</dd>
+<dt>Linear capacitor:</dt>
+<dd>
+<p>The small-signal equivalent circuit of a linear capacitor is the
+capacitor itself.</p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/2/smequiv_cap.png" />
+:::</p>
+</dd>
+<dt>Independent voltage source:</dt>
+<dd>
+<p>The small-signal equivalent circuit of an independent voltage source
+is a short-circuit.</p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/2/smequiv_vsource.png" />
+:::</p>
+</dd>
+<dt>Independent current source:</dt>
+<dd>
+<p>The small-signal equivalent circuit of an independent current source
+is an open-circuit.</p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/2/smequiv_csource.png" />
+:::</p>
+</dd>
+<dt>Controlled sources:</dt>
+<dd>
+<p>The small-signal equivalent circuit of a controlled source is the
+same controlled source.</p>
+</dd>
+</dl>
+<p>::: center
+<img alt="image" src="../Figure/2/smequiv_controlled.png" width="\textwidth" />
+:::</p>
+<p>Referring back to <span class="arithmatex">\(i_C-v_{BE}\)</span> relation, the large slope gives rise to a
+large transconductance.</p>
+<p>::: multicols
+2</p>
+<p>::: flushleft
+<img alt="image" height="4cm" src="../Figure/2/amplifier_graph1.png" />
+:::</p>
+<p>The transconductance <span class="arithmatex">\(g_m\)</span> at DC operating point
+<span class="arithmatex">\(<span class="arithmatex">\(g_m = \bigg[\frac{i_C}{dv_{BE}}\bigg]_{DC} \approx \frac{d}{dv_{BE}}\bigg[I_Se^{v_{BE}/V_t}\bigg] = \frac{I_C}{V_t}\)</span>\)</span>
+where <span class="arithmatex">\(I_C = I_Se^{v_{bias}/V_t}\)</span> denotes the DC current.
+:::</p>
+<p>As a follow up, BJT needs to have a large <span class="arithmatex">\(g_m\)</span>, which is one reason we
+do not operate in saturation region due to the small <span class="arithmatex">\(g_m\)</span>.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/sat_region1.png" />
+:::</p>
+<ul>
+<li>
+<p>If we compare <span class="arithmatex">\(\Delta i_C\)</span> in active and saturation mode, you can
+    see that <span class="arithmatex">\(\Delta i_{C,\, active} \gg i_{C,\, sat}\)</span>.</p>
+</li>
+<li>
+<p>Referring back to the equation for transconductance <span class="arithmatex">\(g_m\)</span>, we can
+    approximate it to be equivalently the formula for the slope:
+    <span class="arithmatex">\(<span class="arithmatex">\(g_m = \frac{di_C}{dv_{BE}} \approx \frac{\Delta i_C}{\Delta v_{BE}}\)</span>\)</span></p>
+</li>
+<li>
+<p>Since in both cases, <span class="arithmatex">\(\Delta v_{BE} = v_{BE2} - v_{BE1}\)</span> is the
+    same, with the only difference being <span class="arithmatex">\(\Delta i_C\)</span>, then
+    <span class="arithmatex">\(g_{m,\, active} \gg g_{m,\, sat}\)</span></p>
+</li>
+</ul>
+<p>This all relates back to how voltage is amplified or rather how a large
+voltage gain is obtained.</p>
+<p>::: center
+<img alt="image" height="4.5cm" src="../Figure/2/voltage_amp.png" />
+:::</p>
+<ol>
+<li>
+<p>In the first curve, the <span class="arithmatex">\(i_C-v_{BE}\)</span> relation, a small <span class="arithmatex">\(v_{in}\)</span> is
+    mapped to a large <span class="arithmatex">\(i_C\)</span> via <span class="arithmatex">\(g_m\)</span>: <span class="arithmatex">\(i_C = g_mv_{in}\)</span></p>
+</li>
+<li>
+<p>Notice how our amplified output is current, so we need to map it
+    back to voltage, which is the second curve, the <span class="arithmatex">\(i_C-v_{CE}\)</span>
+    relation.</p>
+</li>
+<li>
+<p>The resultant <span class="arithmatex">\(i_C\)</span> is then mapped to a large <span class="arithmatex">\(v_{ce}\)</span> via <span class="arithmatex">\(r_o\)</span>
+    where <span class="arithmatex">\(g_o = 1/r_o\)</span>: <span class="arithmatex">\(v_{ce} = r_oi_C\)</span></p>
+</li>
+<li>
+<p>As a result, voltage amplification is achieved.</p>
+</li>
+</ol>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Small-Signal Equivalent Circuit Refer to
+the lecture slides for the in-depth derivation. The collector current
+can be expressed as <span class="arithmatex">\(<span class="arithmatex">\(i_C = g_ov_{ce} + g_mv_{be}\)</span>\)</span> where <span class="arithmatex">\(i_C\)</span>,
+<span class="arithmatex">\(v_{ce}\)</span>, and <span class="arithmatex">\(v_{be}\)</span> are small-signal (AC) quantities denoted by the
+lower-case. Another version is using the relationship <span class="arithmatex">\(\beta i_b = i_C\)</span>,
+the equation becomes <span class="arithmatex">\(<span class="arithmatex">\(i_C \approx \beta i_b + g_ov_{ce}\)</span>\)</span> Thus, the
+small-signal equivalent model of the BJT in active mode using a
+voltage-controlled current source</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/active_equiv3.png" />
+:::</p>
+<p>and the other using a current-controlled current source</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/active_equiv4.png" />
+:::</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Small-Signal Parameters The base-emitter
+resistance <span class="arithmatex">\(r_{be}\)</span>, equivalently <span class="arithmatex">\(1/g_{be}\)</span>, can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(r_{be} = \bigg[\frac{dv_{BE}}{di_B}\bigg]_{DC} = \beta\frac{V_t}{I_C} = \beta\frac{1}{g_m} = \frac{V_t}{I_B}\)</span>\)</span>
+A few things to note, <span class="arithmatex">\(r_{be}\)</span> consist of both emitter <span class="arithmatex">\(r_e\)</span> and base
+resistance <span class="arithmatex">\(r_b\)</span> <span class="arithmatex">\(<span class="arithmatex">\(r_{be} = r_b + r_e\)</span>\)</span> But, since the emitter is
+heavily doped, <span class="arithmatex">\(r_b \gg r_e\)</span>, which means the base-emitter is dominated
+by the base resistance, <span class="arithmatex">\(r_{be} \approx r_b\)</span>. The emitter resistance
+<span class="arithmatex">\(r_e\)</span> can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(r_e = \bigg[\frac{dv_{BE}}{di_E}\bigg] = \frac{1}{\beta + 1}\bigg[\frac{dv_{BE}}{di_B}\bigg]_{DC} = \frac{r_{be}}{\beta + 1}\)</span>\)</span>
+Each terminal have different characteristics shown below:</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/active_equiv5.png" />
+:::</p>
+<p>We are basically expressing the resistance looking into the circuit. It
+maybe clearer to see what the purpose of determining these equations
+are, by using the following diagram instead</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/resistor_equiv.png" />
+:::</p>
+<p>As a recap, there are four small-signal parameters associated with BJT:</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/2/active_equiv3.png" />
+:::</p>
+<ul>
+<li>
+<p>Transconductance
+    <span class="arithmatex">\(\displaystyle g_m = \bigg[\frac{di_C}{dv_{BE}}\bigg]_{DC} = \frac{I_C}{V_t}\)</span></p>
+</li>
+<li>
+<p>Output conductance
+    <span class="arithmatex">\(\displaystyle g_o = \bigg[\frac{di_C}{dv_{CE}}\bigg]_{DC} = \frac{I_C}{V_A}\)</span></p>
+</li>
+<li>
+<p>Base-emitter resistance
+    <span class="arithmatex">\(\displaystyle r_{be} = \bigg[\frac{dv_{BE}}{di_B}\bigg]_{DC} = \frac{V_t}{I_B}\)</span></p>
+</li>
+<li>
+<p>Transistor parameter <span class="arithmatex">\(\displaystyle \beta = \frac{I_C}{I_B}\)</span></p>
+</li>
+</ul>
+<p>::: list</p>
+<p>The transistor parameter <span class="arithmatex">\(\beta\)</span> is typically given, which usually has a
+value of <span class="arithmatex">\(100\)</span>. The other three parameters are what varies in ways due
+to the DC operating point.
+:::</p>
+<h1 id="bjt-voltage-amplifiers">BJT Voltage Amplifiers<a class="headerlink" href="#bjt-voltage-amplifiers" title="Permanent link">&para;</a></h1>
+<p>-4ex -1ex -.4ex 1ex .2ex Load Line and Maximum Signal Swing Recall that
+a transistor is optimal as an amplifier when operating in the active
+region. The load line is a line drawn on the characteristics curve.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/loadline1.png" />
+:::</p>
+<p>The load line can be expressed as <span class="arithmatex">\(<span class="arithmatex">\(i_C = \frac{V_{CC} - v_{CE}}{R_c}\)</span>\)</span>
+The intersection of the load line and <span class="arithmatex">\(i_C-v_{CE}\)</span> curve with
+<span class="arithmatex">\(v_{BE} = V_{bias}\)</span> gives us the DC operating point (or the bias point).
+Once the operating point is established you essentially know how to bias
+the transistor optimallyeither by varying <span class="arithmatex">\(V_{bias}\)</span> or <span class="arithmatex">\(R_c\)</span>.</p>
+<p>::: list</p>
+<p>Note that it is normally done by varying <span class="arithmatex">\(V_{bias}\)</span> in the circuit, as
+varying <span class="arithmatex">\(R_c\)</span> affects gain, which will get to in a bit.
+:::</p>
+<p>Two important considerations in deciding the location of the DC
+operating point are the gain and allowable signal. In deciding the value
+for <span class="arithmatex">\(V_{bias}\)</span>, it is useful to refer to the <span class="arithmatex">\(i_C-v_{CE}\)</span> curve:</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/3/loadline2.png" />
+:::</p>
+<ol>
+<li>
+<p>If DC operating point is too close to the boundary of active and
+    saturation regions, the max signal swing will be smaller (shown on
+    the left).</p>
+</li>
+<li>
+<p>If DC operating point is too close to <span class="arithmatex">\(V_{CC}\)</span>, the max signal swing
+    will be smaller (shown on the right).</p>
+</li>
+</ol>
+<p>From the DC operating point, we can determine the lower and upper bounds
+of <span class="arithmatex">\(v_o\)</span> signal swing coming from <span class="arithmatex">\(v_{in}\)</span> in the circuit:</p>
+<ul>
+<li>
+<p>The lower bound can be expressed as <span class="arithmatex">\(v_{o,\,total,\,min} = V_{sat}\)</span></p>
+</li>
+<li>
+<p>The upper bound can be expressed as <span class="arithmatex">\(v_{o,\,total,\,max} = V_{CC}\)</span></p>
+</li>
+</ul>
+<p>::: center
+<img alt="image" src="../Figure/3/maxsigswing.png" width="7cm" />
+:::</p>
+<p>From the two equations, we can determine the max voltage swing, which is
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:maxvoltswing}
+    v_{o,\,AC,\,max} = \frac{V_{CC} - V_{sat}}{2}\)</span>\)</span> There are three
+basic configurations for connecting BJT as an amplifier:</p>
+<ul>
+<li>
+<p>Common-Emitter (CE) Amplifier</p>
+</li>
+<li>
+<p>Common-Base (CB) Amplifier</p>
+</li>
+<li>
+<p>Common-Collector (CC) Amplifier</p>
+</li>
+</ul>
+<p>Each has distinctly different attributes and hence areas of application,
+which will cover in each section.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Common-Emitter (CE) Amplifier The
+common-emitter amplifier is the most widely use of the three. The
+common-emitter amplifier circuit is shown below:</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/ce_amp1.png" />
+<img alt="image" height="3.75cm" src="../Figure/3/ce_amp2.png" />
+:::</p>
+<p>The purpose of each component are explained below:</p>
+<ul>
+<li>
+<p>The signal source represents the Thevenin equivalent of the signal
+    generator with an internal resistance <span class="arithmatex">\(R_s\)</span>.</p>
+</li>
+<li>
+<p>The two isolating capacitors <span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span> are used to separate
+    the AC signals from the DC biasing voltageby passing AC signals and
+    blocking any DC component.</p>
+</li>
+<li>
+<p>It uses two resistors <span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span> to generate DC biasing voltage
+    <span class="arithmatex">\(V_B\)</span> at the basereferred to as voltage divider biasing.</p>
+</li>
+</ul>
+<p>Suppose <span class="arithmatex">\(R_c\)</span> is known, we can express the optimal <span class="arithmatex">\(V_B\)</span> that yields the
+max output voltage swing shown in which is
+<span class="arithmatex">\(<span class="arithmatex">\(V_B = V_t\ln{\bigg[\frac{V_{CC}-V_{sat}}{2I_SR_c}\bigg]}\)</span>\)</span> Since <span class="arithmatex">\(V_B\)</span>
+is generated by a DC biasing voltage, we'll rewrite <span class="arithmatex">\(V_B\)</span> in terms of
+<span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span>. In order to derive this equation, we need to consider
+two possible cases:</p>
+<dl>
+<dt>Case 1:</dt>
+<dd>
+<p>If <span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span> small, <span class="arithmatex">\(I_B\)</span> can ignored since
+<span class="arithmatex">\(I_{R1},I_{R2} \gg I_B\)</span>. Therefore, we can apply voltage division to
+determine <span class="arithmatex">\(V_B\)</span>, such that <span class="arithmatex">\(<span class="arithmatex">\(V_B = \frac{R_2}{R_1 + R_2}V_{CC}\)</span>\)</span> One
+downside to this is that it will consume more (DC) power.</p>
+</dd>
+<dt>Case 2:</dt>
+<dd>
+<p>If <span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span> are large, <span class="arithmatex">\(I_B\)</span> can no longer be ignored since
+<span class="arithmatex">\(I_{R1},I_{R2}\)</span> is now comparable to <span class="arithmatex">\(I_B\)</span>, where the current splits
+from <span class="arithmatex">\(I_B\)</span> and <span class="arithmatex">\(I_{R2}\)</span>. Performing KCL at node B yields
+<span class="arithmatex">\(<span class="arithmatex">\(V_B = \frac{G_1V_{CC} - (I_C/\beta)}{G_1 + G_2}\)</span>\)</span> Note that
+<span class="arithmatex">\(G_1 = 1/R_1\)</span> and <span class="arithmatex">\(G_2 = 1/R_2\)</span> and <span class="arithmatex">\(I_C = \beta I_B\)</span>.</p>
+</dd>
+</dl>
+<p>Since we always prefer to reduce power consumption, we make <span class="arithmatex">\(R_1\)</span> and
+<span class="arithmatex">\(R_2\)</span> large.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characteristic Parameter of the CE
+Amplifier By replacing the BJT with an equivalent circuit shown below,
+we can use this circuit to determine the characteristics parameters of
+the amplifier <span class="arithmatex">\(R_{in}\)</span>, <span class="arithmatex">\(R_{out}\)</span>, and <span class="arithmatex">\(A_{v}\)</span> as follows.</p>
+<p>In small-signal analysis, the capacitors <span class="arithmatex">\(C_1\)</span>, <span class="arithmatex">\(C_2\)</span> are replaced by
+effective shorts and the DC source <span class="arithmatex">\(V_{CC}\)</span> is replaced by a ground.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/ce_equiv1.png" width="70%" />
+:::</p>
+<p>::: list</p>
+<p>The circuit above is shown without a voltage-divider bias, <span class="arithmatex">\(R_1\)</span> and
+<span class="arithmatex">\(R_2\)</span>, instead uses <span class="arithmatex">\(V_b\)</span>.
+:::</p>
+<p>The input resistance <span class="arithmatex">\(R_{in}\)</span> is the resistance \"seen\" by the AC
+source connected to the input.</p>
+<p>::: multicols
+2</p>
+<p>::: flushleft
+<img alt="image" height="3cm" src="../Figure/3/ce_rin.png" />
+:::</p>
+<p>The input resistance is expressed by the following formula:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{in} = r_{be}\)</span>\)</span> and with DC biasing, the equation can be expressed
+as: <span class="arithmatex">\(<span class="arithmatex">\(R_{in} = R_1 \parallel R_2 \parallel r_{be}\)</span>\)</span>
+:::</p>
+<p>The output resistance <span class="arithmatex">\(R_{out}\)</span> is the resistance looking in at the
+collector.</p>
+<p>::: multicols
+2</p>
+<p>::: flushleft
+<img alt="image" height="3cm" src="../Figure/3/ce_rout.png" />
+:::</p>
+<p>The output resistance is expressed by the following formula:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{out} = R_c \parallel r_o\)</span>\)</span> where <span class="arithmatex">\(r_o\)</span> is intended to quantify the
+impact of base-width modulation.
+:::</p>
+<p>The voltage gain <span class="arithmatex">\(A_v\)</span> is the ratio of the output voltage <span class="arithmatex">\(v_o\)</span> at the
+collector to the input voltage <span class="arithmatex">\(v_{in}\)</span>. <span class="arithmatex">\(<span class="arithmatex">\(A_v = \frac{v_o}{v_{in}}\)</span>\)</span>
+Since <span class="arithmatex">\(v_{in} = v_{be}\)</span> and by performing KCL at output node (refer to
+the diagram used for <span class="arithmatex">\(R_{out}\)</span>)
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{v_o}{R_c} + \frac{v_o}{r_o} + g_mv_{be} = \bigg(\frac{1}{R_c}+\frac{1}{r_o}\bigg)v_o + g_mv_{in} = 0 \quad \Longleftrightarrow \quad \frac{v_o}{v_{in}} = -g_m\bigg(\frac{R_cr_o}{R_c + r_o}\bigg)\)</span>\)</span>
+The voltage gain is expressed by the following formula:
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:ce_voltgain}
+    A_v = -g_mR_{out} = -g_m(R_c \parallel r_o)\)</span>\)</span></p>
+<p>::: list</p>
+<p>Notice how <span class="arithmatex">\(A_v\)</span> is negative, which indicates a phase inversion from
+input to output. In other words, CE amplifier is an inverting amplifier.
+:::</p>
+<p>One issue with the design is when we try to fabricate this on-chip,
+resistors take up a ton of space and becomes quite expensive, which
+brings up the next point. So an alternative is by replacing the resistor
+<span class="arithmatex">\(R_c\)</span> with an active load as shown below.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/ce_equiv3.png" width="8cm" />
+:::</p>
+<p>The purpose of <span class="arithmatex">\(Q_2\)</span> is to behave like a resistor with no amplification:</p>
+<ul>
+<li>
+<p>It can be achieved by passing through a constant voltage <span class="arithmatex">\(V_{b2}\)</span> at
+    the base.</p>
+</li>
+<li>
+<p>Since <span class="arithmatex">\(V_{b2}\)</span> is constant, the current of <span class="arithmatex">\(Q_2\)</span> is constant and
+    therefore, it can be represented by a constant source <span class="arithmatex">\(I_{CC2}\)</span> with
+    an output resistance <span class="arithmatex">\(r_{o2}\)</span>.</p>
+</li>
+<li>
+<p>If we can use <span class="arithmatex">\(r_{o2}\)</span> to fabricate <span class="arithmatex">\(R_c\)</span>, then a large <span class="arithmatex">\(A_v\)</span> is
+    obtained without using a large resistor.</p>
+</li>
+</ul>
+<p>::: list</p>
+<p>Keep in mind, <span class="arithmatex">\(Q_1\)</span> is an NPN transistor, so <span class="arithmatex">\(Q_2\)</span> is a PNP transistor
+for <span class="arithmatex">\(R_{out}\)</span> to be large.
+:::</p>
+<p>The characteristics parameters are the same as before, with the only
+difference changing <span class="arithmatex">\(R_c\)</span> to <span class="arithmatex">\(r_{o2}\)</span> in the output resistance:</p>
+<ul>
+<li>
+<p>Input resistance: <span class="arithmatex">\(R_{in} = r_{be}\)</span></p>
+</li>
+<li>
+<p>Output resistance: <span class="arithmatex">\(R_{out} = r_{o1} \parallel r_{o2}\)</span></p>
+</li>
+<li>
+<p>Voltage gain: <span class="arithmatex">\(A_v = -g_mR_{out} = -g_m(r_{o1}\parallel r_{o2})\)</span></p>
+</li>
+</ul>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary</p>
+<ol>
+<li>
+<p>The CE amplifier gives high input resistance (draws little current),
+    moderately high output resistance (easier to match for maximum power
+    transfer), and high voltage gain, <span class="arithmatex">\(A_{v}\)</span> (a desirable feature of an
+    amplifier).</p>
+</li>
+<li>
+<p>It is an inverting amplifier, by increasing <span class="arithmatex">\(g_m\)</span> or <span class="arithmatex">\(R_{out}\)</span>,
+    increases the voltage gain <span class="arithmatex">\(A_v\)</span>, but it comes at a cost:</p>
+<ul>
+<li>
+<p>Increasing <span class="arithmatex">\(g_m\)</span> results in more power consumption.</p>
+</li>
+<li>
+<p>It is costly to fabricate a large resistor on chip.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>By replacing the resistor with an active load, one can increase the
+    voltage gain without using a large resistor, with an extra cost of
+    providing an additional biasing voltage.</p>
+</li>
+</ol>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Emitter Degeneration When we include a
+resistance <span class="arithmatex">\(R_E\)</span> in the emitter as shown below, it can lead to
+significant changes in the amplifier characteristics.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/ce_amp3.png" />
+:::</p>
+<p>The emitter degeneration forms a negative feedback mechanism that
+stabilizes <span class="arithmatex">\(I_C\)</span>. In other words, it stabilizes the DC operating point,
+accounting for the fluctuations which can change the value of <span class="arithmatex">\(V_B\)</span>.</p>
+<ol>
+<li>
+<p>Without <span class="arithmatex">\(R_E\)</span>, let's say <span class="arithmatex">\(V_{b1}\)</span> increases, then <span class="arithmatex">\(V_{BE1}\)</span>
+    increases as well, since <span class="arithmatex">\(<span class="arithmatex">\(V_{b1} = V_{BE1}\)</span>\)</span></p>
+</li>
+<li>
+<p>As a result, <span class="arithmatex">\(I_C\)</span> increases, changing the DC operating point and
+    affecting <span class="arithmatex">\(v_o\)</span>. <span class="arithmatex">\(<span class="arithmatex">\(I_C = I_Se^{V_{BE1}/V_t}\)</span>\)</span></p>
+</li>
+<li>
+<p>When <span class="arithmatex">\(R_E\)</span> is present, <span class="arithmatex">\(V_{BE1}\)</span> will be smaller subsequently, since
+    <span class="arithmatex">\(<span class="arithmatex">\(V_{b1} = V_{BE1} + R_EI_E \qquad \Longleftrightarrow \qquad V_{BE1} = V_{b1} - R_EI_E\)</span>\)</span></p>
+</li>
+<li>
+<p>Then <span class="arithmatex">\(I_C\)</span> decreases, making it less susceptible to fluctuations.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/emitter_degen.png" width="80%" />
+:::</p>
+</li>
+</ol>
+<p>With the addition of <span class="arithmatex">\(R_E\)</span>, the characteristics parameters changed.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/ce_equiv2.png" width="75%" />
+:::</p>
+<p>The input resistance is: <span class="arithmatex">\(<span class="arithmatex">\(R_{in} \approx (1 + g_{m1}R_E)r_{be1}\)</span>\)</span> and
+with DC biasing: <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:ce_rindc}
+        R_{in} \approx R_1 \parallel R_2 \parallel (1 + g_{m1}R_E)r_{be1}\)</span>\)</span>
+The output resistance is:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{out} = (r_{o1} \parallel r_{o2})(1 + g_{m1}R_E)\)</span>\)</span> The voltage gain
+is: <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:ce_evoltgain}
+    A_v = \frac{-g_{m1}(r_{o1} \parallel r_{o2})}{1 + g_{m1}R_E}\)</span>\)</span> The
+emitter degeneration reduces the power consumption, but comes at a cost,
+which lowers the voltage gain by <span class="arithmatex">\(1 + g_{m1}R_E\)</span> in the denominator. A
+way to preserve the voltage gain is by adding a shunt capacitor <span class="arithmatex">\(C_E\)</span> in
+parallel to <span class="arithmatex">\(R_E\)</span>.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/ce_equiv4.png" width="50%" />
+:::</p>
+<p>If you recall from 202, the impedance of a capacitor is
+<span class="arithmatex">\(<span class="arithmatex">\(z_{C_E} = \frac{1}{j\omega C_E}\)</span>\)</span> where <span class="arithmatex">\(\omega\)</span> is the input
+frequency:</p>
+<ul>
+<li>
+<p>In DC, emitter degeneration is active because <span class="arithmatex">\(C_E\)</span> behaves as an
+    open-circuit (<span class="arithmatex">\(z_{C_E} = \infty\)</span>), since <span class="arithmatex">\(\omega = 0\)</span>.</p>
+</li>
+<li>
+<p>In AC, emitter degeneration is inactive at <span class="arithmatex">\(\omega\)</span> because <span class="arithmatex">\(C_E\)</span>
+    behaves as a short-circuit (<span class="arithmatex">\(z_{C_E} = 0\)</span>), since <span class="arithmatex">\(C_E\)</span> designed as
+    such to be sufficiently large.</p>
+</li>
+</ul>
+<p>As a result, the voltage gain is no longer affected by emitter
+degeneration, such that <span class="arithmatex">\(<span class="arithmatex">\(A_v \approx g_m(R_c \parallel r_o)\)</span>\)</span></p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary</p>
+<ol>
+<li>
+<p>With emitter degeneration, it posses four unique characteristics:</p>
+<ul>
+<li>
+<p>Increased input resistance by a factor of <span class="arithmatex">\(1 + g_{m1}R_E\)</span></p>
+</li>
+<li>
+<p>Reduced voltage gain by a factor of <span class="arithmatex">\(1 + g_{m1}R_E\)</span></p>
+</li>
+<li>
+<p>Increased output resistance</p>
+</li>
+<li>
+<p>Reduces power consumption</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To preserve voltage gain at the frequency of the input, shunt
+    capacitor <span class="arithmatex">\(C_E\)</span> that behaves as a short circuit at input frequency
+    is added.</p>
+</li>
+</ol>
+<p>::: center
+<img alt="image" src="../Figure/3/ce_amp4.png" width="50%" />
+:::</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Common-Base (CB) Amplifier The common-base
+amplifier circuit is shown below:</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/cb_amp1.png" />
+:::</p>
+<p>The input is now located at the emitter, while the output is still at
+the collector. The components still perform the same purpose as
+described in CE amplifier.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characteristic Parameter of the CB
+Amplifier In small-signal analysis, the following circuit is obtained.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/cb_equiv1.png" width="60%" />
+:::</p>
+<p>The input resistance is:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{in} \approx \frac{r_{be}}{\beta + 1} = r_e\)</span>\)</span> and with DC biasing:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{in} \approx R_1 \parallel R_2 \parallel r_e\)</span>\)</span> The output resistance
+is the same as that of CE amplifier: <span class="arithmatex">\(<span class="arithmatex">\(R_{out} = R_c \parallel r_o\)</span>\)</span> The
+voltage gain is: <span class="arithmatex">\(<span class="arithmatex">\(A_v \approx g_{m1}(R_c \parallel r_{o})\)</span>\)</span></p>
+<p>::: list</p>
+<p>Since <span class="arithmatex">\(A_v\)</span> is positive, CB amplifier is a non-inverting amplifier,
+unlike CE amplifier which is an inverting amplifier.
+:::</p>
+<p>One thing to add, we can also replace <span class="arithmatex">\(R_c\)</span> with an active load, like we
+did with CE amplifier.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/cb_equiv2.png" width="5cm" />
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary</p>
+<ol>
+<li>
+<p>The CB amplifier has a low input resistance. This is undesirable as
+    it will draw a large current when driven by a voltage input. Refer
+    to the next section.</p>
+</li>
+<li>
+<p>It is a non-inverting amplifier, with the same voltage gain as that
+    of CE amplifier.</p>
+</li>
+</ol>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characterizing Amplifiers In general, CB
+amplifiers should not be used as a voltage amplifiers due to its low
+input resistance, <span class="arithmatex">\(R_{in} = r_e\)</span>. To understand why, refer to the
+characterization of an amplifier below.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/3/amp1.png" />
+:::</p>
+<p>For amplifiers, a large input resistance is desirable as it reduces the
+loading effect of the amplifier on the signal source.</p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/3/amp_rin1.png" />
+:::</p>
+<p>The larger the input resistance <span class="arithmatex">\(R_{in}\)</span>, the more the input signal
+<span class="arithmatex">\(v_s\)</span> will appear at the input of the amplifier. <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:input_volt}
+    v_{in} = \frac{R_{in}}{R_s + R_{in}}v_s \approx \bigg(1 - \frac{R_s}{R_{in}}\bigg)v_s\)</span>\)</span>
+If you recall, CE amplifiers have a large input resistance, thus making
+it a desirable voltage amplifier.
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{R_s}{R_{in}} \approx 0 \qquad \Longrightarrow \qquad v_{in} \approx v_s\)</span>\)</span>
+However, CB amplifiers have a small input resistance, since
+<span class="arithmatex">\(r_e = r_{be}/(\beta + 1)\)</span>, where <span class="arithmatex">\(\beta\)</span> is around <span class="arithmatex">\(100\)</span>, resulting to
+a huge voltage loss from <span class="arithmatex">\(v_s\)</span> to <span class="arithmatex">\(v_{in}\)</span>.</p>
+<p>Suppose we use a Norton equivalent source, instead of a Thevenin
+equivalent source.</p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/3/amp_rin2.png" />
+:::</p>
+<p>Now in this scenario, the signal of the source is current. <span class="arithmatex">\(R_N\)</span> is
+designed to be very large, so all the current will be delivered to the
+load, oppose to <span class="arithmatex">\(R_s\)</span> in Thevenin equivalent.
+<span class="arithmatex">\(<span class="arithmatex">\(i_{in} = \frac{R_N}{R_{in} + R_N}i_N \approx \bigg(1 - \frac{R_{in}}{R_N}\bigg)i_N\)</span>\)</span>
+So if <span class="arithmatex">\(R_N\)</span> is large enough or <span class="arithmatex">\(R_{in}\)</span> is very small, then all the
+current will be delivered to the load.
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{R_{in}}{R_N} \approx 0 \qquad \Longrightarrow \qquad i_{in} \approx i_N\)</span>\)</span>
+-2ex -0.1ex -.2ex .2ex .2ex Additional Remarks When designing the
+circuit, we might not have a current generator, so how can we apply
+them?</p>
+<p>::: center
+<img alt="image" src="../Figure/3/cb_equiv3.png" width="60%" />
+:::</p>
+<p>By placing a common-emitter, the transistor <span class="arithmatex">\(Q_1\)</span> maps <span class="arithmatex">\(v_{in}\)</span> to
+<span class="arithmatex">\(I_{C1}\)</span> and we know it has an output resistance <span class="arithmatex">\(r_{o1}\)</span> due to base
+width modulationthe equivalent circuit is shown on the right.</p>
+<p>::: list</p>
+<p>This isn't really covered in the scope of the course, just intended to
+demonstrate how it would look like. It is referred to as a cascode
+amplifier.
+:::</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Common-Collector (CC) Amplifier The
+common-collector amplifier is usually referred to as an emitter
+follower. The common-collector amplifier circuit is shown below:</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/cc_amp1.png" />
+:::</p>
+<p>Since the output voltage is at the emitter, it is in phase with the base
+voltage, so there is no inversion from input to output.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characteristic Parameter of the CC
+Amplifier In small-signal analysis, the following circuit is obtained.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/cc_equiv1.png" width="60%" />
+:::</p>
+<p>The input resistance is the same as that of CE amplifier:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{in} = r_{be}\)</span>\)</span> The output resistance is:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{out} \approx \frac{1}{g_{m1}} = r_e\)</span>\)</span> The voltage gain is:
+<span class="arithmatex">\(<span class="arithmatex">\(A_v \approx 1\)</span>\)</span></p>
+<p>::: list</p>
+<p>Because there is no inversion and <span class="arithmatex">\(A_v \approx 1\)</span>, the output voltage
+closely follows the input voltage in both phase and amplitudethus the
+term emitter-follower.
+:::</p>
+<p>Suppose we replace <span class="arithmatex">\(R_E\)</span> with an active load, as we have done with the
+previous two amplifiers.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/cc_equiv2.png" />
+:::</p>
+<ul>
+<li>
+<p>An NPN-based source follower functions as a voltage-down shifter as
+    <span class="arithmatex">\(v_o = v_{in} - v_{BE1}\)</span>. It shifts the level down by <span class="arithmatex">\(v_{BE1}\)</span>.</p>
+</li>
+<li>
+<p>An PNP-based source follower functions as a voltage-up shifter as
+    <span class="arithmatex">\(v_o = v_{in} + v_{EB1}\)</span>. It shifts the level up by <span class="arithmatex">\(v_{EB1}\)</span>.</p>
+</li>
+</ul>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/volt_shift.png" />
+:::</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characterizing Amplifiers Due to its high
+input resistance and a low output resistance, it can be used a voltage
+buffer. To understand the use of this, let's look back at the diagram we
+used for CB amplifiers.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/3/amp1.png" />
+:::</p>
+<p>Previously, we covered how a high input resistance is more favorable.
+Now, we'll focus on the output resistance.</p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/3/amp_rout1.png" />
+:::</p>
+<p>For amplifiers, a small output resistance is desirable, as it increases
+the output voltage <span class="arithmatex">\(v_{out}\)</span> that will be delivered to the load resistor
+<span class="arithmatex">\(R_L\)</span>.
+<span class="arithmatex">\(<span class="arithmatex">\(v_L = \frac{R_L}{R_L + R_{out}}v_{out} \approx \bigg(1 - \frac{R_{out}}{R_L}\bigg)v_{out}\)</span>\)</span>
+Since CC amplifiers have a small output resistance, such that
+<span class="arithmatex">\(R_{out} \ll R_L\)</span>, then
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{R_{out}}{R_L} \approx 0 \qquad \Longrightarrow \qquad v_L = v_{out}\)</span>\)</span>
+Thus, comes down to the reason we use an emitter follower. As an
+example, we have a CE amplifier with a load resistor attached at the
+output.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/emitter_circuit1.png" />
+:::</p>
+<p>When a load resistor is present, the voltage gain in is now:
+<span class="arithmatex">\(<span class="arithmatex">\(A_{v,\ \text{w/ load}} = -g_{m1}(R_{out} \parallel R_L) = -g_{m1}(r_{o1} \parallel r_{o2} \parallel R_L)\)</span>\)</span>
+Depending on <span class="arithmatex">\(R_L\)</span>:</p>
+<dl>
+<dt>Case 1:</dt>
+<dd>
+<p>If <span class="arithmatex">\(R_L \gg R_{out}\)</span>, then
+<span class="arithmatex">\(A_{v,\ \text{w/ load}} =  A_{v,\ \text{w/o load}}\)</span>, where <span class="arithmatex">\(R_L\)</span>
+will have no impact on the voltage gain.</p>
+</dd>
+<dt>Case 2:</dt>
+<dd>
+<p>If <span class="arithmatex">\(R_L \ll R_{out}\)</span>, then
+<span class="arithmatex">\(A_{v,\ \text{w/ load}} \ll  A_{v,\ \text{w/o load}}\)</span>, where <span class="arithmatex">\(R_L\)</span>
+will have a severe loading impact on voltage gain.</p>
+</dd>
+</dl>
+<p>A solution to Case 2, if we add an emitter follower stage to lower the
+output resistance, then <span class="arithmatex">\(R_L\)</span> will have no impact on the voltage gain.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/3/emitter_circuit2.png" />
+:::</p>
+<p>If you recall an emitter follower has a voltage gain of <span class="arithmatex">\(A_v \approx 1\)</span>,
+which is good, since it does not alter or change the voltage gain (More
+on this in the next section). By applying an emitter follower, we can
+make <span class="arithmatex">\(R_{out}\)</span> even smaller, such that <span class="arithmatex">\(R_L \gg R_{out}\)</span>.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Multi-stage Amplifiers [Two or more (CE or CB)
+amplifiers can be connected in a cascaded arrangement with the output of
+one amplifier driving the input of the next.]{#bjt_multistage}</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/ms_circuit1.png" />
+:::</p>
+<p>Isolation capacitors exists at the input, output, and in between stages
+to:</p>
+<ul>
+<li>
+<p>Isolate the amplifier from both input source and output load</p>
+</li>
+<li>
+<p>DC bias each stage individually</p>
+</li>
+</ul>
+<p>The overall voltage gain of cascaded amplifiers is the product of the
+individual voltage gains. <span class="arithmatex">\(<span class="arithmatex">\(A_v = A_{v1}A_{v2}A_{v3} \cdots A_{vn}\)</span>\)</span>
+where <span class="arithmatex">\(n\)</span> is the number of stages.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/ms_voltgain.png" />
+:::</p>
+<p>Each triangular symbol represents a separate amplifier. As an example,
+we have a two-stage BJT amplifier below:</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/ms_circuit3.png" />
+:::</p>
+<ol>
+<li>
+<p>The input voltage <span class="arithmatex">\(v_1\)</span> can be obtained using voltage division
+    (refer to and ). <span class="arithmatex">\(<span class="arithmatex">\(v_1 = \frac{R_{in1}}{R_{in1}+R_s}v_s\)</span>\)</span> where
+    <span class="arithmatex">\(R_{in1} = R_1 \parallel R_2 \parallel (1 + g_{m1}R_{E1})r_{be1}\)</span></p>
+</li>
+<li>
+<p>The voltage gain of stage 1, <span class="arithmatex">\(A_{v1}\)</span>, is equivalently the voltage
+    gain of a CE amplifier with emitter degeneration (refer to ). The
+    load resistance is <span class="arithmatex">\(R_{c1} \parallel R_{in2}\)</span>.
+    <span class="arithmatex">\(<span class="arithmatex">\(A_{v1} = \frac{-g_{m1}(R_{c1} \parallel R_{in2})}{1 + g_{m1}R_{E1}}\)</span>\)</span>
+    where
+    <span class="arithmatex">\(R_{in2} = R_3 \parallel R_4 \parallel (1 + g_{m2}R_{E2})r_{be2}\)</span></p>
+</li>
+<li>
+<p>Likewise, the same goes for voltage gain of stage 2, <span class="arithmatex">\(A_{v2}\)</span>. The
+    load resistance is <span class="arithmatex">\(R_{c2}\)</span>.
+    <span class="arithmatex">\(<span class="arithmatex">\(A_{v2} = \frac{-g_{m2}R_{c2}}{1 + g_{m2}R_{E2}}\)</span>\)</span></p>
+</li>
+<li>
+<p>Combining all three, we can determine the overall voltage gain:
+    <span class="arithmatex">\(<span class="arithmatex">\(A_v = \bigg[\frac{R_{in1}}{R_{in1}+R_s}v_s\bigg] \times \bigg[\frac{-g_{m1}(R_{c1} \parallel R_{in2})}{1 + g_{m1}R_{E1}}\bigg] \times \bigg[\frac{-g_{m2}R_{c2}}{1 + g_{m2}R_{E2}}\bigg]\)</span>\)</span></p>
+</li>
+</ol>
+<p>::: list</p>
+<p>For load resistance, we didn't include <span class="arithmatex">\(r_{o1}\)</span> or <span class="arithmatex">\(r_{o2}\)</span> because a
+large resistor (<span class="arithmatex">\(r_{o1},r_{o2}\)</span> is <span class="arithmatex">\(\SI{10}{\kilo\ohm}\)</span> to
+<span class="arithmatex">\(\SI{100}{\kilo\ohm}\)</span>) in parallel with a small resistor has the
+resistance of the smaller one roughly./
+:::</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Current Mirrors A current mirror is a circuit
+designed to copy a current through one active device by controlling the
+current in another active device of a circuit, keeping the output
+current constant regardless of loading.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Diode-Connected BJT It uses a
+diode-connected BJT, where the base and collector are tied together.</p>
+<p>::: center
+<img alt="image" src="../Figure/3/diode_bjt1.png" width="\textwidth" />
+:::</p>
+<p>The reason we call it a diode-connected BJT is because if you remember
+we have a diode <span class="arithmatex">\(D_1\)</span> between base and emitter then a diode <span class="arithmatex">\(D_2\)</span>
+between base and collector.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/bjt_diode1.png" />
+:::</p>
+<p>When a wire is connected between the base and collector, the diode <span class="arithmatex">\(D_2\)</span>
+is short-circuited. As a result, the entire circuit functions like a
+diode <span class="arithmatex">\(D_1\)</span>.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/3/bjt_diode2.png" />
+:::</p>
+<p>Looking into the circuit, the input resistance is simply the resistance
+of the diode <span class="arithmatex">\(D_1\)</span>, which is:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{in} \approx \frac{1}{g_m} \approx r_{e}\)</span>\)</span> And so a diode-connected
+BJT synthesizes a resistor of low resistance <span class="arithmatex">\(r_e\)</span>. Equivalently, we
+constructed a resistor without physically adding one to the circuit.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Analysis of Current Mirror without
+Base-Width Modulation Let's now look at a BJT current mirror. Refer to
+the circuit below.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/bjt_mirror1.png" />
+:::</p>
+<p>For the sake of simplicity, let's first ignore base-width modulation. In
+other words, we ignore <span class="arithmatex">\(r_o\)</span>. If you recall from , the collector current
+<span class="arithmatex">\(I_{C1}\)</span> and <span class="arithmatex">\(I_{C2}\)</span> can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(i_{C1} \approx I_{s1}e^{v_{BE}/V_t}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(i_{C2} \approx I_{s2}e^{v_{BE}/V_t}\)</span>\)</span> and by dividing both equations
+we have <span class="arithmatex">\(<span class="arithmatex">\(\frac{i_{C2}}{i_{C1}} = \frac{I_{s2}}{I_{s1}}\)</span>\)</span> When <span class="arithmatex">\(Q_1\)</span> and
+<span class="arithmatex">\(Q_2\)</span> are identical, we have that <span class="arithmatex">\(I_{s2} = I_{s1}\)</span>, thus
+<span class="arithmatex">\(<span class="arithmatex">\(i_{C2} = i_{C1}\)</span>\)</span> which defines it to be a current mirror. If we
+further make further simplifications, which we also ignore <span class="arithmatex">\(i_B\)</span>, since
+the base current is very small, such that <span class="arithmatex">\(i_{B1}, i_{B2} \ll i_{C_1}\)</span>,
+the current source <span class="arithmatex">\(<span class="arithmatex">\(J = i_{C1} + i_{B1} + i_{B2}\)</span>\)</span> can be expressed as
+<span class="arithmatex">\(J \approx i_{C1}\)</span> or <span class="arithmatex">\(<span class="arithmatex">\(i_{C2} \approx \frac{I_{s2}}{I_{s1}}J\)</span>\)</span> Though
+for a more accurate analysis where base currents <span class="arithmatex">\(i_{B1}\)</span> and <span class="arithmatex">\(i_{B2}\)</span>
+are accounted for while <span class="arithmatex">\(r_o\)</span> is not accounted for, we have
+<span class="arithmatex">\(<span class="arithmatex">\(i_{C2} = \frac{1}{1 + (2/\beta)}J \approx \bigg(1 - \frac{2}{\beta}\bigg)J\)</span>\)</span></p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Analysis of Current Mirror with Base-Width
+Modulation Let's now consider the impact of base-width modulation <span class="arithmatex">\(r_o\)</span>.
+When accounted for, the circuit can be depicted as</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/bjt_mirror2.png" />
+:::</p>
+<p>From , the collector current <span class="arithmatex">\(I_{C1}\)</span> and <span class="arithmatex">\(I_{C2}\)</span> can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(i_{C1} \approx I_{s1}e^{v_{BE}/V_t}\bigg(1 + \frac{v_{CE1}}{V_A}\bigg)\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(i_{C2} \approx I_{s2}e^{v_{BE}/V_t}\bigg(1 + \frac{v_{CE2}}{V_A}\bigg)\)</span>\)</span>
+and by dividing both equations we have
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{i_{C2}}{i_{C1}} = \frac{I_{s2}}{I_{s1}}\frac{1 + (v_{CE2}/V_A)}{1 + (v_{CE1}/V_A)}\)</span>\)</span>
+However, <span class="arithmatex">\(v_{CE1}\)</span> is not the same as <span class="arithmatex">\(v_{CE2}\)</span> or in other words,
+<span class="arithmatex">\(v_{CE1} \neq v_{CE2}\)</span> because they are located in two different
+branches, so there's no way we can set them to the same voltage.</p>
+<p>If we let <span class="arithmatex">\(v_{CE1} = v_{CE}\)</span> and <span class="arithmatex">\(v_{CE2} = v_{CE} + \Delta v_{CE}\)</span>,
+then we can express the difference in voltage between <span class="arithmatex">\(v_{CE1}\)</span> and
+<span class="arithmatex">\(v_{CE2}\)</span> by <span class="arithmatex">\(\Delta v_{CE}\)</span>, thus
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{i_{C2}}{i_{C1}} = \frac{I_{s2}}{I_{s1}}\underbrace{\bigg(1 + \frac{\Delta v_{CE}/V_A}{1 + (v_{CE}/V_A)}\bigg)}_{\neq 1}\)</span>\)</span>
+Since <span class="arithmatex">\(v_{CE1} \neq v_{CE2}\)</span> in general, the impact of <span class="arithmatex">\(v_{CE}\)</span> mismatch
+cannot be neglected for precision current mirrors.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Current Sinks and Current Sources The
+purpose of current mirrors is to construct current sources and current
+sinks from a master current source whose value is stableindependent of
+temperature and supply voltage fluctuations.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/3/current_mirror1.png" />
+:::</p>
+<p>The current sources and current sinks allows us to very easily generate
+DC biasing current across a circuit. The currents are set by the ratio
+of transistor size, specifically the area of the emitter.</p>
+<p>For example, we have a two-stage amplifier consists consists of two CE
+amplifiers formed by <span class="arithmatex">\(Q_1\)</span> and <span class="arithmatex">\(Q_2\)</span>. The circuit is denoted in blue.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/3/current_mirror2.png" />
+:::</p>
+<p>Ideally we're suppose to use a master current source, as the one we have
+does not provide a constant current source.</p>
+<p>::: multicols
+2</p>
+<p>::: flushleft
+<img alt="image" height="4.5cm" src="../Figure/3/current_mirror3.png" />
+:::</p>
+<p>In reality it's not even actual current source, but two resistors using
+basic voltage division, such that
+<span class="arithmatex">\(<span class="arithmatex">\(V_A = \frac{r_{e4}}{r_{e4} + r_{e3}}V_{CC}\)</span>\)</span> If <span class="arithmatex">\(Q_3\)</span> and <span class="arithmatex">\(Q_4\)</span> have
+the same emitter dimensions, then <span class="arithmatex">\(r_{e4} = r_{e3}\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(V_A = \frac{V_{CC}}{2}\)</span>\)</span>
+:::</p>
+<p>Since <span class="arithmatex">\(v_{BE4} = V_A\)</span>, we can express the collector current <span class="arithmatex">\(i_{C4}\)</span> as
+<span class="arithmatex">\(<span class="arithmatex">\(i_{C4} = I_{s4}e^{V_{A}/V_t}\)</span>\)</span> Once <span class="arithmatex">\(V_{A}\)</span> is known, we can determine
+collector currents of the current sources and sinks. For example,
+<span class="arithmatex">\(i_{C5}\)</span> is <span class="arithmatex">\(<span class="arithmatex">\(i_{C5} = \frac{I_{s5}}{I_{s4}}i_{C4}\)</span>\)</span> If <span class="arithmatex">\(Q_4\)</span> and <span class="arithmatex">\(Q_5\)</span>
+have the same emitter dimension, then <span class="arithmatex">\(I_{s5} = I_{s4}\)</span> and
+<span class="arithmatex">\(i_{C5} = i_{C4}\)</span>. We can perform the same analysis for <span class="arithmatex">\(i_{C6}\)</span> to
+<span class="arithmatex">\(i_{C8}\)</span>.</p>
+<h1 id="mosfets">MOSFETs<a class="headerlink" href="#mosfets" title="Permanent link">&para;</a></h1>
+<p>Most of the stuff covered should be a recap from PC224, though the
+format of some formulas might looks different, but nonetheless are the
+same.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Structure of MOSFET Similar to BJTs, there are
+two types of Metal-Oxide Field-Effect transistors (MOSFETs) namely:</p>
+<ol>
+<li>
+<p>NMOS transistor</p>
+<p>::: center
+<img alt="image" src="../Figure/4/nmos.png" width="80%" />
+:::</p>
+</li>
+<li>
+<p>PMOS transistor</p>
+<p>::: center
+<img alt="image" src="../Figure/4/pmos.png" width="80%" />
+:::</p>
+</li>
+</ol>
+<p>It's a four-terminal symmetrical device: the source terminal (S), the
+drain terminal (D), the gate terminal (G), and the substrate or bulk
+terminal (B).</p>
+<dl>
+<dt>Source:</dt>
+<dd>
+<p>Heavily doped n-typed semiconductor for NMOS and heavily doped
+p-typed silicon for PMOS</p>
+</dd>
+<dt>Drain:</dt>
+<dd>
+<p>Heavily doped n-typed semiconductor for NMOS and heavily doped
+p-typed silicon for PMOS</p>
+</dd>
+<dt>Gate:</dt>
+<dd>
+<p>Polysilicon compound (highly conductive and yet more stable than
+metal)</p>
+</dd>
+<dt>Substrate:</dt>
+<dd>
+<p>Lightly doped p-type for NMOS and lightly doped p-type silicon for
+PMOS</p>
+</dd>
+</dl>
+<p>Note how the following references are denoted by their subscripts:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(v_{GS}\)</span> is the gate to source voltage, otherwise known as
+    <span class="arithmatex">\(v_{GS} = v_G - v_S\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(v_{SG}\)</span> is the source to gate voltage, otherwise known as
+    <span class="arithmatex">\(v_{SG} = v_S - v_G\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(i_{DS}\)</span> is the current flowing from drain to source.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(V_T\)</span> is the threshold voltagedefines the boundary of MOSFET being
+    ON or OFF:</p>
+</li>
+</ul>
+<p>Often the source terminal is connected to the ground, so they remove it
+from the subscript, such as <span class="arithmatex">\(i_D\)</span>, but should still be the same thing as
+<span class="arithmatex">\(i_{DS}\)</span>.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Dimensions of MOSFET Refer to the diagram
+below:</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/4/dim_MOSFET.png" />
+:::</p>
+<p>The dimensions of MOSFET are defined as such:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(L_d\)</span> is the drawn length</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L\)</span> or <span class="arithmatex">\(L_{\text{eff}}\)</span> is the effective length</p>
+</li>
+<li>
+<p><span class="arithmatex">\(W\)</span> is the width</p>
+</li>
+<li>
+<p><span class="arithmatex">\(t_{ox}\)</span> is the gate oxide thickness</p>
+</li>
+<li>
+<p>The dimensions of source and drain are dictated by the number of
+    contacts</p>
+</li>
+</ul>
+<p>A capacitor formed by the gate (top plate) and negative ions (bottom
+plate) is created <span class="arithmatex">\(<span class="arithmatex">\(C_g = C_{ox}(WL)\)</span>\)</span> and <span class="arithmatex">\(C_{ox}\)</span> is the gate
+capacitance per area and is given by
+<span class="arithmatex">\(<span class="arithmatex">\(C_{ox} = \frac{\epsilon_{ox}}{t_{ox}}\)</span>\)</span> where
+<span class="arithmatex">\(\epsilon_{ox} = \SI{3.45e-11}{\farad\per\meter}\)</span> is the permittivity of
+oxide.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Operation of MOSFET There are three mode of
+MOSFET operation: cut-off mode, triode mode, and saturation modeeach
+mode have different applications.</p>
+<p>To get a better understanding of the different modes, we will be
+referencing the <span class="arithmatex">\(i_{D}-v_{DS}\)</span> characteristics of the MOSFET, which
+looks similar to that of the <span class="arithmatex">\(i_C-v_{CE}\)</span> characteristics of a BJT.</p>
+<p>::: center
+<img alt="image" height="6cm" src="../Figure/4/operation_region.png" />
+:::</p>
+<p>Note that the graph shown is for NMOS. For PMOS, you would have to
+reverse all the formulas, so instead of <span class="arithmatex">\(v_{DS}\)</span> it would be <span class="arithmatex">\(v_{SD}\)</span>.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Cut-Off Mode When <span class="arithmatex">\(v_{GS} &lt; V_T\)</span>, the
+MOSFET is OFF and no channel is induced.</p>
+<p>::: center
+<img alt="image" src="../Figure/4/cutoff_mode.png" width="5cm" />
+:::</p>
+<p>The MOSFET will be in cut-off mode, where no current flows, such that
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS} = 0\)</span>\)</span> In cut-off, the MOSFET functions as an open switch with
+no current flow.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Triode Mode When <span class="arithmatex">\(v_{GS} &gt; V_T\)</span>, the MOSFET
+is ON and a channel will be induced where current starts flowing if
+<span class="arithmatex">\(v_{DS} &gt; 0\)</span>.</p>
+<p>::: center
+<img alt="image" src="../Figure/4/triode_mode.png" width="\textwidth" />
+:::</p>
+<p>The triode mode and saturation mode is bounded by the pinch-off
+condition, <span class="arithmatex">\(v_{GS} - V_T\)</span>. The MOSFET will operate in the triode mode as
+long as <span class="arithmatex">\(<span class="arithmatex">\(v_{DS} &lt; v_{GS} - V_T\)</span>\)</span> For NMOS, the channel current is given
+by
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS,\,\text{triode}} = \mu_nC_{ox}\frac{W}{L}\bigg[(v_{GS} - V_T)v_{DS} - \frac{1}{2}v_{DS}^2 \bigg]\)</span>\)</span>
+For PMOS, the channel current is given by
+<span class="arithmatex">\(<span class="arithmatex">\(i_{SD,\,\text{triode}} = \mu_pC_{ox}\frac{W}{L}\bigg[(v_{SG} - |V_{Tp}|)v_{SD} - \frac{1}{2}v_{SD}^2 \bigg]\)</span>\)</span>
+If we look back at the <span class="arithmatex">\(i_{D}-v_{DS}\)</span> characteristics of the MOSFET in
+the triode mode, you'll notice it behaves like a linear resistor when a
+small <span class="arithmatex">\(v_{DS}\)</span> is applied</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/4/iv_curve1.png" />
+:::</p>
+<p>such that we can represent the channel conductance as
+<span class="arithmatex">\(<span class="arithmatex">\(g_{DS} = \bigg[\frac{di_{DS}}{dv_{DS}}\bigg]_{DC} \approx \mu_nC_{ox}\frac{W}{L}(v_{GS} - V_T)\)</span>\)</span>
+In triode mode, the MOSFET functions as a voltage-controlled resistor
+with conductance <span class="arithmatex">\(g_{DS}\)</span>.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Saturation Mode When <span class="arithmatex">\(v_{GS} &gt; V_T\)</span> and
+<span class="arithmatex">\(v_{DS} = v_{GS} - V_T\)</span>, the MOSFET is ON and a channel will pinch-off
+at the drain.</p>
+<p>::: center
+<img alt="image" src="../Figure/4/pinch_off.png" width="\textwidth" />
+:::</p>
+<p>For NMOS, the channel current at pinch-off is given by
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS,\,\text{pinch-off}} = \mu_nC_{ox}\frac{W}{L}(v_{GS} - V_T)\)</span>\)</span> For
+PMOS, the channel current at pinch-off is given by
+<span class="arithmatex">\(<span class="arithmatex">\(i_{SD,\,\text{pinch-off}} = \mu_pC_{ox}\frac{W}{L}(v_{SG} - |V_{Tp}|)\)</span>\)</span>
+At pinch-off, the channel current <span class="arithmatex">\(i_{DS}\)</span> becomes independent of
+<span class="arithmatex">\(v_{DS}\)</span>, where <span class="arithmatex">\(<span class="arithmatex">\(g_o = \frac{di_{DS}}{dv_{DS}} = 0\)</span>\)</span> It behaves as a
+voltage-controlled current source with transconductance</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/4/iv_curve2.png" />
+:::</p>
+<p>which can be defined as
+<span class="arithmatex">\(<span class="arithmatex">\(g_m = \bigg[\frac{di_{DS}}{dv_{GS}}\bigg]_{DC} = \frac{2i_{DS}}{v_{GS} - V_T}\)</span>\)</span>
+so to increase pinch-off, one can:</p>
+<ul>
+<li>
+<p>increase the width <span class="arithmatex">\(W\)</span>, size of the transistor, or</p>
+</li>
+<li>
+<p>Increase <span class="arithmatex">\(v_{GS} - V_T\)</span>, otherwise referred to as over-drive
+    voltage.</p>
+</li>
+</ul>
+<p>When <span class="arithmatex">\(v_{DS}\)</span> exceeds pinch-off, such that <span class="arithmatex">\(v_{DS} &gt; v_{GS} - V_T\)</span>, the
+MOSFET will operate in the saturation mode.</p>
+<p>::: center
+<img alt="image" src="../Figure/4/sat_mode.png" width="\textwidth" />
+:::</p>
+<p>From the previous <span class="arithmatex">\(i_{D}-v_{DS}\)</span> characteristics of the MOSFET, we
+assumed that as we increase <span class="arithmatex">\(v_{DS}\)</span>, the channel current <span class="arithmatex">\(i_{DS}\)</span> will
+remain constant.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/4/iv_curve3.png" />
+:::</p>
+<p>If you recall for BJTs, we had something called the \"Early effect\",
+likewise the same thing can occur in MOSFET.</p>
+<p>::: center
+<img alt="image" height="4.5cm" src="../Figure/4/iv_curve4.png" />
+:::</p>
+<p>The output conductance <span class="arithmatex">\(g_o\)</span> can redefined to be
+<span class="arithmatex">\(<span class="arithmatex">\(g_o = i_{DS,\,\text{pinch-off}}\lambda\)</span>\)</span> For MOSFETs, we use
+<span class="arithmatex">\(\lambda = 1/V_A\)</span>, as it is most widely used, where <span class="arithmatex">\(V_A\)</span> is Early
+voltage. For NMOS, the channel current at saturation is given by
+<span class="arithmatex">\(i_{DS,\,\text{pinch-off}} + g_ov_{DS}\)</span> or
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS,\,\text{sat}} = \frac{1}{2}\mu_nC_{ox}\frac{W}{L}(v_{GS} - V_T)^2(1 + \lambda v_{DS})\)</span>\)</span>
+For PMOS, the channel current at saturation is given by
+<span class="arithmatex">\(<span class="arithmatex">\(i_{SD,\,\text{sat}} = \frac{1}{2}\mu_pC_{ox}\frac{W}{L}(v_{SG} - |V_{Tp}|)^2(1 + \lambda v_{SD})\)</span>\)</span>
+In saturation mode, the MOSFET functions as a voltage-controlled current
+source with finite output resistance.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary For NMOS: <span class="arithmatex">\(<span class="arithmatex">\(i_{DS} = 0 
+    \begin{cases}v_{GS} &lt; V_T\end{cases}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS,\,\text{triode}} = \mu_nC_{ox}\frac{W}{L}\bigg[(v_{GS} - V_T)v_{DS} - \frac{1}{2}v_{DS}^2 \bigg]
+    \begin{cases}v_{GS} &gt; V_T \\ v_{DS} &lt; v_{GS} - V_T\end{cases}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:nmos_currentsat}
+    i_{DS,\,\text{sat}} = \frac{1}{2}\mu_nC_{ox}\frac{W}{L}(v_{GS} - V_T)^2(1 + \lambda v_{DS})
+    \begin{cases}v_{GS} &gt; V_T \\ v_{DS} &gt; v_{GS} - V_T\end{cases}\)</span>\)</span> For
+PMOS: <span class="arithmatex">\(<span class="arithmatex">\(i_{SD} = 0 
+    \begin{cases}v_{SG} &lt; V_T\end{cases}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(i_{SD,\,\text{triode}} = \mu_nC_{ox}\frac{W}{L}\bigg[(v_{SG} - |V_{Tp}|)v_{SD} - \frac{1}{2}v_{SD}^2 \bigg]
+    \begin{cases}v_{SG} &gt; V_T \\ v_{SD} &lt; v_{SG} - |V_{Tp}|\end{cases}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(i_{SD,\,\text{sat}} = \frac{1}{2}\mu_nC_{ox}\frac{W}{L}(v_{SG} - |V_{Tp}|)^2(1 + \lambda v_{DS})
+    \begin{cases}v_{SG} &gt; V_T \\ v_{SD} &gt; v_{SG} - |V_{Tp}|\end{cases}\)</span>\)</span></p>
+<p>-4ex -1ex -.4ex 1ex .2ex Design of Amplifiers The same idea kinda be
+applied for MOSFETs when doing small-signal analysis, as we have
+previously covered with BJTs.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/4/amplifier_MOSFET.png" />
+:::</p>
+<p>The total gate to source voltage becomes <span class="arithmatex">\(<span class="arithmatex">\(v_{GS} = V_{bias} + v_{in}\)</span>\)</span>
+where <span class="arithmatex">\(V_{bias}\)</span> ensures that the MOSFET operates in saturation, which
+gives rise to a large <span class="arithmatex">\(g_m\)</span>.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/4/iv_curve5.png" />
+:::</p>
+<ol>
+<li>
+<p>In the first curve, the <span class="arithmatex">\(i_{DS}-v_{GS}\)</span> relation, a small <span class="arithmatex">\(v_{in}\)</span>
+    is mapped to a large <span class="arithmatex">\(i_{DS}\)</span> via <span class="arithmatex">\(g_m\)</span>.</p>
+</li>
+<li>
+<p>Notice how our amplified output is current, so we need to map it
+    back to voltage, which is the second curve, the <span class="arithmatex">\(i_{DS}-v_{DS}\)</span>
+    relation.</p>
+</li>
+<li>
+<p>The resultant <span class="arithmatex">\(i_{DS}\)</span> is then mapped to a large <span class="arithmatex">\(v_{DS}\)</span> via <span class="arithmatex">\(r_o\)</span>
+    where <span class="arithmatex">\(g_o = 1/r_o\)</span>.</p>
+</li>
+<li>
+<p>As a result, voltage amplification is achieved.</p>
+</li>
+</ol>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Small-Signal Equivalent Circuit The
+small-signal equivalent circuit is shown below.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/4/small_equiv.png" />
+:::</p>
+<p>The drain current can be expressed as combination of the DC and AC
+signal of the circuit <span class="arithmatex">\(<span class="arithmatex">\(i_{DS} = I_{DS} + i_{ds}\)</span>\)</span> For NMOS, the
+small-signal drain current can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(i_{ds} \approx g_mv_{gs} + g_ov_{ds}\)</span>\)</span> where
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:nmos_transconductance}
+    g_m = \frac{2I_{DS}}{V_{GS} - V_T} \qquad g_o = \lambda I_{DS}\)</span>\)</span> For
+PMOS, the small-signal drain current can be expressed as
+<span class="arithmatex">\(<span class="arithmatex">\(i_{sd} \approx g_mv_{sg} + g_ov_{sd}\)</span>\)</span> where
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:pmos_transconductance}
+    g_m = \frac{2I_{SD}}{V_{SG} - |V_{Tp}|} \qquad g_o = \lambda I_{SD}\)</span>\)</span></p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Voltage Gain With the output resistor <span class="arithmatex">\(r_o\)</span>
+added, the voltage gain becomes
+<span class="arithmatex">\(<span class="arithmatex">\(A_v = \frac{v_o}{v_{in}} = -g_m(R_D \parallel r_o)\)</span>\)</span> and by increasing
+<span class="arithmatex">\(I_{DS}\)</span> or <span class="arithmatex">\(R_D\)</span>, boost the voltage gain.</p>
+<p>In the next module, we will go over more in-depth, covering the three
+basic configurations for connecting the MOSFET as an amplifier, similar
+to what we covered for BJTs.</p>
+<h1 id="mosfet-voltage-amplifiers">MOSFET Voltage Amplifiers<a class="headerlink" href="#mosfet-voltage-amplifiers" title="Permanent link">&para;</a></h1>
+<p>-4ex -1ex -.4ex 1ex .2ex Load Line and Maximum Signal Swing Similarly,
+in MOSFET voltage amplifiers, we need to pick the proper DC operating
+point given the <span class="arithmatex">\(V_{bias}\)</span> in order to achieve maximum voltage swing
+allowed.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/loadline1.png" />
+:::</p>
+<p>The load line can be expressed as: <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:mosfet_loadline}
+    i_{DS} = \frac{V_{DD} - v_{DS}}{R_D}\)</span>\)</span> The intersection of the load
+line and <span class="arithmatex">\(i_{DS}-v_{DS}\)</span> curve with <span class="arithmatex">\(v_{GS} = V_{bias}\)</span> gives us the DC
+operating point (or the bias point). Once the operating point is
+established you essentially know how to bias the transistor
+optimallyeither by varying <span class="arithmatex">\(V_{bias}\)</span> or <span class="arithmatex">\(R_D\)</span>.</p>
+<p>::: list</p>
+<p>Note that it is normally done by varying <span class="arithmatex">\(V_{bias}\)</span> in the circuit, as
+varying <span class="arithmatex">\(R_D\)</span> affects gain, which will get to in a bit.
+:::</p>
+<p>From the DC operating point, we can determine the lower and upper bounds
+of <span class="arithmatex">\(v_o\)</span> signal swing coming from <span class="arithmatex">\(v_{in}\)</span> in the circuit.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/5/nmos_pmos.png" />
+:::</p>
+<p>For a common-source amplifier with an NMOS:</p>
+<ul>
+<li>
+<p>The lower bound can be expressed as <span class="arithmatex">\(v_{o,\,total,\,min} = V_{sat}\)</span></p>
+</li>
+<li>
+<p>The upper bound can be expressed as <span class="arithmatex">\(v_{o,\,total,\,max} = V_{DD}\)</span></p>
+</li>
+</ul>
+<p>For a common-source amplifier with a PMOS:</p>
+<ul>
+<li>
+<p>The lower bound can be expressed as <span class="arithmatex">\(v_{o,\,total,\,min} = 0\)</span></p>
+</li>
+<li>
+<p>The upper bound can be expressed as
+    <span class="arithmatex">\(v_{o,\,total,\,max} = V_{DD} - V_{sat}\)</span></p>
+</li>
+</ul>
+<p>From the upper and lower bound equations, we can derive a few equations.</p>
+<ul>
+<li>
+<p>The max voltage swing
+    <span class="arithmatex">\(<span class="arithmatex">\(v_{o,\,AC,\,max} = \frac{V_{DD} - V_{sat}}{2}\)</span>\)</span></p>
+</li>
+<li>
+<p>The optimal DC voltage at output
+    <span class="arithmatex">\(<span class="arithmatex">\(v_{o,\,DC} = \frac{V_{DD} + V_{sat}}{2} = V_{DD} - R_DI_{DS}\)</span>\)</span></p>
+</li>
+<li>
+<p>The optimal drain resistance by solving for <span class="arithmatex">\(R_D\)</span>
+    <span class="arithmatex">\(<span class="arithmatex">\(\frac{V_{DD} + V_{sat}}{2} = V_{DD} +  - R_D\frac{1}{2}\mu_nC_{ox}\frac{W}{L}(V_{bias} - V_T)^2\)</span>\)</span></p>
+</li>
+</ul>
+<p>There are three basic configurations for connecting MOSFET as an
+amplifier:</p>
+<ul>
+<li>
+<p>Common-Source (CS) Amplifier</p>
+</li>
+<li>
+<p>Common-Gate (CG) Amplifier</p>
+</li>
+<li>
+<p>Common-Drain (CD) Amplifier</p>
+</li>
+</ul>
+<p>Each has distinctly different attributes and hence areas of application,
+which will cover in each section.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Common-Source (CS) Amplifier Of the three basic
+MOS amplifier configurations, the common source is the most widely used.
+The common-source amplifier circuit is shown below:</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/cs_amp1.png" />
+:::</p>
+<p>The purpose of each component are explained below:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(R_s\)</span> is the internal resistance of the signal source <span class="arithmatex">\(v_s\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span> generate a DC biasing voltage <span class="arithmatex">\(V_{DC}\)</span> at the
+    gatereferred to as voltage divider biasing.
+    <span class="arithmatex">\(<span class="arithmatex">\(V_{DC} = \frac{R_2}{R_1 + R_2}V_{DD}\)</span>\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span> are isolating capacitors used to separate the AC
+    signals from the DC biasing voltageby passing AC signals and
+    blocking any DC component.</p>
+</li>
+</ul>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characteristic Parameter of the CS
+Amplifier The small-signal equivalent of the CS amplifier with resistor
+load is shown below:</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/5/cs_equiv1.png" />
+:::</p>
+<p>Because there is no gate current flow, the input resistance <span class="arithmatex">\(R_{in}\)</span> is:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{in} = \infty\)</span>\)</span> The output resistance is:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{out} = R_D \parallel r_o\)</span>\)</span> The voltage gain is:
+<span class="arithmatex">\(<span class="arithmatex">\(A_v  = - g_mR_{out} = -g_m(R_D \parallel r_o)\)</span>\)</span> The negative voltage
+gain indicates that the it is an inverting amplifierphase difference
+between <span class="arithmatex">\(v_o\)</span> and <span class="arithmatex">\(v_{in}\)</span> is <span class="arithmatex">\(180^\circ\)</span>.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/cs_voltgain.png" />
+:::</p>
+<p>To increase the voltage amplification, we can modify one of two
+components: <span class="arithmatex">\(g_m\)</span> or <span class="arithmatex">\(R_{out}\)</span>.</p>
+<ul>
+<li>
+<p>Increasing <span class="arithmatex">\(g_m\)</span> is not ideal, as a large <span class="arithmatex">\(g_m\)</span> will increase either
+    <span class="arithmatex">\(W/L\)</span> or <span class="arithmatex">\(V_{GS} - V_T\)</span>, which result in a large drain current
+    <span class="arithmatex">\(I_{DS}\)</span> where
+    <span class="arithmatex">\(<span class="arithmatex">\(g_m\uparrow = k_n\frac{W}{L}\uparrow(V_{GS} - V_T)\uparrow \quad\Longrightarrow\quad I_{DS} = \frac{1}{2}\mu_nC_{ox}\frac{W}{L}\uparrow(v_{GS} - V_T)^2\uparrow\)</span>\)</span>
+    thus, equivalently increase the power consumption
+    <span class="arithmatex">\(<span class="arithmatex">\(P\uparrow = V_{DD}I_{DS}\uparrow\)</span>\)</span></p>
+</li>
+<li>
+<p>From <span class="arithmatex">\(R_{out}\)</span>, we can increase <span class="arithmatex">\(R_D\)</span>, which is more ideal as it
+    doesn't affect power consumption. However, increasing <span class="arithmatex">\(R_D\)</span> affects
+    the load line shown in .</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/cs_voltamp1.png" />
+:::</p>
+<p>The output can result in distortion if <span class="arithmatex">\(R_D\)</span> is increases, as for an
+NMOS for example</p>
+<p>::: center
+<img alt="image" src="../Figure/5/cs_voltamp2.png" width="75%" />
+:::</p>
+<p>thus, increasing <span class="arithmatex">\(R_D\)</span> needs to be chosen carefully to maximize
+output voltage swing.</p>
+</li>
+</ul>
+<p>In order to increase <span class="arithmatex">\(R_D\)</span> in an effective manner, we can use a
+current-resistor load instead. The small-signal equivalent of the CS
+amplifier with current-source load is shown below:</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/5/cs_amp3.png" />
+:::</p>
+<p>The purpose of the transistor <span class="arithmatex">\(M_2\)</span> is to behave like a resistor with no
+amplification:</p>
+<ul>
+<li>
+<p>It can be achieve by passing through a constant voltage <span class="arithmatex">\(V_{b2}\)</span> at
+    the gate.</p>
+</li>
+<li>
+<p>Since <span class="arithmatex">\(V_{b2}\)</span> is constant, the current of <span class="arithmatex">\(M_2\)</span> is constant and
+    therefore, it can be represented by a constant source <span class="arithmatex">\(I_{SD2}\)</span> with
+    an output resistance <span class="arithmatex">\(r_{o2}\)</span>.</p>
+</li>
+<li>
+<p>If we can use <span class="arithmatex">\(r_{o2}\)</span> to fabricate <span class="arithmatex">\(R_D\)</span>, then a large <span class="arithmatex">\(A_v\)</span> is
+    obtained without using a large resistor.</p>
+</li>
+</ul>
+<p>::: list</p>
+<p>Keep in mind, <span class="arithmatex">\(M_1\)</span> is an NMOS, so <span class="arithmatex">\(M_2\)</span> must be a PMOS, otherwise it
+will result no voltage gain of <span class="arithmatex">\(A_v \approx -1\)</span>. Refer below for an
+in-depth explanation.
+:::</p>
+<p>::: {#corollary:mos_res}
+::: cBox
+::: corollaryT
+<strong>Corollary 5.1</strong>. <em>The purpose of using a PMOS is regarding the
+resistance looking into MOSFET. Refer to the diagram below:</em></p>
+<p>::: center
+<img alt="image" height="2cm" src="../Figure/5/mosfet_res.png" />
+:::</p>
+<p><em>If we use an NMOS for <span class="arithmatex">\(M_2\)</span>, the output resistance would be:
+<span class="arithmatex">(<span class="arithmatex">\(R_{out} = r_{o1} \parallel \frac{1}{g_{m2}} \approx \frac{1}{g_{m2}}\)</span>\)</span>
+Since <span class="arithmatex">\(r_{o1} \gg (1/g_{m2})\)</span>, the voltage gain would be:
+<span class="arithmatex">(<span class="arithmatex">\(A_v = -g_{m1}\frac{1}{g_{m2}} \approx -1\)</span>\)</span></em>
+:::
+:::
+:::</p>
+<p>Now, the output resistance can be expressed using <span class="arithmatex">\(r_{o2}\)</span> instead of
+<span class="arithmatex">\(R_D\)</span>, where: <span class="arithmatex">\(<span class="arithmatex">\(R_{out} = r_{o1} \parallel r_{o2}\)</span>\)</span> Likewise, the
+voltage gain is: <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:cs_voltgain}
+    A_v = -g_{m1}R_{out} = -g_{m1}(r_{o1} \parallel r_{o2})\)</span>\)</span></p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary</p>
+<ol>
+<li>
+<p>The CS amplifiers has infinite input impedance (draws no current at
+    DC), and a moderately high output resistance (easier to match), and
+    a high voltage gain (a desirable feature of an amplifier).</p>
+</li>
+<li>
+<p>It is an inverting amplifier. The voltage gain can increases, by
+    increasing <span class="arithmatex">\(g_m\)</span> or <span class="arithmatex">\(R_D\)</span>:</p>
+<ul>
+<li>
+<p>Increasing <span class="arithmatex">\(g_m\)</span> will increases the power consumption.</p>
+</li>
+<li>
+<p>Increasing <span class="arithmatex">\(R_D\)</span> is ideal, but needs to be chosen carefully to
+    maximize output voltage swing.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>A current-source load is used in place of the resistor load, where a
+    large load resistance <span class="arithmatex">\(r_{o2}\)</span> of the amplifier is obtained without
+    using an expensive resistor <span class="arithmatex">\(R_D\)</span>.</p>
+</li>
+</ol>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Source Degeneration A small resistor is
+added at the source to form source degeneration.</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/5/cs_degen.png" />
+:::</p>
+<p>The purpose for adding source degeneration is similar to an emitter
+degeneration of CE amplifiers.</p>
+<ol>
+<li>
+<p>The source degeneration forms a negative feedback. When the input
+    voltage <span class="arithmatex">\(V_{GS1}\)</span> attempts to increase, the voltage drop across
+    <span class="arithmatex">\(R_s\)</span> increases reducing <span class="arithmatex">\(V_{GS1}\)</span>.
+    <span class="arithmatex">\(<span class="arithmatex">\(V_{b1} = V_{GS1} + R_sI_{DS1}\)</span>\)</span></p>
+</li>
+<li>
+<p>When <span class="arithmatex">\(V_{DC}\)</span> (or <span class="arithmatex">\(V_{b1}\)</span>) is fixed, adding <span class="arithmatex">\(R_s\)</span> reduce <span class="arithmatex">\(I_{DS1}\)</span>
+    subsequently DC power consumption.</p>
+</li>
+<li>
+<p>This is at a cost of reduced voltage gain by a factor of
+    <span class="arithmatex">\(1 + g_{m1}R_s\)</span>. <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:cs_voltgaindegen}
+            A_v \approx \frac{-g_{m1}(r_{o1} \parallel r_{o2})}{1 + g_{m1}R_s}\)</span>\)</span></p>
+</li>
+</ol>
+<p>Alternatively, we can mitigate the reduce voltage gain by introducing a
+shunt capacitor <span class="arithmatex">\(C_s\)</span> in parallel with <span class="arithmatex">\(R_s\)</span>, shown below.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/cs_shunt.png" />
+:::</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary</p>
+<ol>
+<li>
+<p>The voltage gain is reduced by a factor of <span class="arithmatex">\(1 + g_mR_s\)</span> as seen in .</p>
+</li>
+<li>
+<p>To preserve voltage gain at the frequency of the input, a shunt
+    capacitor <span class="arithmatex">\(C_s\)</span> is added in parallel with <span class="arithmatex">\(R_s\)</span>.</p>
+</li>
+</ol>
+<p>-4ex -1ex -.4ex 1ex .2ex Common-Gate (CG) Amplifier The common-gate
+amplifier circuit is shown below:</p>
+<p>::: center
+<img alt="image" height="4.5cm" src="../Figure/5/cg_amp1.png" />
+:::</p>
+<p>The properties of a CG amplifier:</p>
+<ul>
+<li>
+<p>The input signal enters the amplifier from the source.</p>
+</li>
+<li>
+<p>The output of the amplifier is taken at the drain.</p>
+</li>
+<li>
+<p>The gate is routed to a DC voltage <span class="arithmatex">\(V_{b1}\)</span> and hence acts as an AC
+    ground in small-signal equivalent circuit, as shown in the next
+    section.</p>
+</li>
+<li>
+<p>The transistor operates in saturation mode,
+    <span class="arithmatex">\(V_{GS} = V_b - v_s &gt; V_T\)</span>.</p>
+</li>
+</ul>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characteristic Parameter of the CG
+Amplifier The small-signal equivalent of the CG amplifier with resistor
+load is shown below:</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/5/cg_equiv1.png" />
+:::</p>
+<p>The input resistance is: <span class="arithmatex">\(<span class="arithmatex">\(R_{in} \approx \frac{1}{g_m}\)</span>\)</span> The output
+resistance is: <span class="arithmatex">\(<span class="arithmatex">\(R_{out} = R_D \parallel r_o\)</span>\)</span> The voltage gain is:
+<span class="arithmatex">\(<span class="arithmatex">\(A_v \approx g_m(R_{out}) = g_m(R_D \parallel r_o)\)</span>\)</span> Notice that the
+gain expression is the same as for the CS amplifier without the negative
+sign, which makes it a non-inverting amplifier. However, CS has a larger
+overall voltage gain, since CG suffers a signal loss due to its small
+input impedance:</p>
+<ul>
+<li>
+<p>The larger the input resistance <span class="arithmatex">\(R_{in}\)</span>, the more the input signal
+    <span class="arithmatex">\(v_s\)</span> will appear at the input of the amplifier.
+    <span class="arithmatex">\(<span class="arithmatex">\(v_{in} = \frac{R_{in}}{R_s + R_{in}}v_s \approx \bigg(1 - \frac{R_s}{R_{in}}\bigg)v_s\)</span>\)</span></p>
+</li>
+<li>
+<p>If you recall, CS amplifiers have a large input resistance,
+    <span class="arithmatex">\(R_{in} \gg R_s\)</span>, thus making it a desirable voltage amplifier.
+    <span class="arithmatex">\(<span class="arithmatex">\(\frac{R_s}{R_{in}} \approx 0 \qquad \Longrightarrow \qquad v_{in} \approx v_s\)</span>\)</span>
+    While CG amplifiers have a small input resistance, <span class="arithmatex">\(1/g_m\)</span>,
+    resulting to a huge voltage loss from <span class="arithmatex">\(v_s\)</span> to <span class="arithmatex">\(v_{in}\)</span>.</p>
+</li>
+<li>
+<p>Despite having the same voltage gain, the CS amplifier have a lower
+    overall voltage gain.</p>
+</li>
+</ul>
+<p>The small-signal equivalent of the CG amplifier with current-source load
+is shown below:</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/5/cg_amp2.png" />
+:::</p>
+<p>Refer to <a href="#corollary:mos_res"></a>. The purpose of <span class="arithmatex">\(M_2\)</span> is identical to
+the one described for CS amplifier, such that the output resistance can
+be expressed using <span class="arithmatex">\(r_{o2}\)</span> instead of <span class="arithmatex">\(R_D\)</span>, where:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{out} = r_{o1} \parallel r_{o2}\)</span>\)</span> Then, the voltage gain is:
+<span class="arithmatex">\(<span class="arithmatex">\(A_v \approx g_m(R_{out}) = g_m(r_{o1} \parallel r_{o2})\)</span>\)</span></p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary</p>
+<ol>
+<li>
+<p>Unlike CS amplifiers, the CG amplifiers has a low input impedance,
+    which is undesirable, as it will draw large current when driven by a
+    voltage input.</p>
+</li>
+<li>
+<p>It is an non-inverting amplifier. The voltage gain is made similar
+    in magnitude to that of the CS amplifier, but suffers signal loss,
+    thus posses a lower overall voltage gain.</p>
+</li>
+</ol>
+<p>-4ex -1ex -.4ex 1ex .2ex Common-Drain (CD) Amplifier The common-drain
+amplifier, more commonly known as the source follower, is similar to the
+emitter follower for the BJT. The common-drain amplifier circuit is
+shown below:</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/cd_amp1.png" />
+:::</p>
+<p>The properties of a CD amplifier:</p>
+<ul>
+<li>
+<p>The input signal enters the amplifier from the gate.</p>
+</li>
+<li>
+<p>The output of the amplifier is taken at the source.</p>
+</li>
+</ul>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Characteristic Parameter of the CD
+Amplifier The small-signal equivalent of the CD amplifier with resistor
+load is shown below:</p>
+<p>::: center
+<img alt="image" height="3.5cm" src="../Figure/5/cd_equiv1.png" />
+:::</p>
+<p>Likewise with CS amplifiers, because there is no gate current flow, the
+input resistance <span class="arithmatex">\(R_{in}\)</span> is: <span class="arithmatex">\(<span class="arithmatex">\(R_{in} = \infty\)</span>\)</span> The output resistance
+is: <span class="arithmatex">\(<span class="arithmatex">\(R_{out} = \frac{1}{g_m}\)</span>\)</span> The voltage gain is: <span class="arithmatex">\(<span class="arithmatex">\(A_v  \approx 1\)</span>\)</span>
+As the name suggests, the output follows the input, thus the voltage
+gain of <span class="arithmatex">\(1\)</span>.</p>
+<p>The small-signal equivalent of the CG amplifier with current-source load
+is shown below:</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/5/cd_amp2.png" />
+:::</p>
+<ul>
+<li>
+<p>A NMOS-based source follower functions as a voltage down-shifter as
+    <span class="arithmatex">\(v_o = v_{in} - v_{GS1}\)</span>. It shifts the voltage level down by
+    <span class="arithmatex">\(v_{GS1}\)</span>.</p>
+</li>
+<li>
+<p>A PMOS-based source follower functions as a voltage up-shifter as
+    <span class="arithmatex">\(v_o = v_{in} + v_{SG1}\)</span>. It shifts the voltage level down by
+    <span class="arithmatex">\(v_{SG1}\)</span>.</p>
+</li>
+<li>
+<p>Since <span class="arithmatex">\(v_{GS1,\,min} = V_{Tn}\)</span> and <span class="arithmatex">\(v_{GS1,\,min} = |V_{Tp}|\)</span>, the
+    minimum voltage shift is the threshold voltage.</p>
+</li>
+</ul>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Summary</p>
+<ul>
+<li>
+<p>The CD amplifier has infinite input impedance (draws no current at
+    DC), a relatively low output resistance, and a voltage gain that is
+    near unity, <span class="arithmatex">\(A_v \approx 1\)</span>.</p>
+</li>
+<li>
+<p>The source follower is used as the output (or last) stage in a
+    multistage amplifier, refer to the next section.</p>
+</li>
+<li>
+<p>Its function is to equip the overall amplifier with a low output
+    resistanceenabling it to supply relatively large load currents
+    without loss of gain.</p>
+</li>
+</ul>
+<p>-4ex -1ex -.4ex 1ex .2ex Multi-Stage Amplifiers Two or more (CS or CG)
+amplifiers can be connected in a cascaded arrangement with the output of
+one amplifier driving the input of the next.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/5/ms_circuit1.png" />
+:::</p>
+<p>Isolation capacitors exists at the input, output, and in between stages
+to:</p>
+<ul>
+<li>
+<p>Isolate the amplifier from both input source and output load</p>
+</li>
+<li>
+<p>DC bias each stage individually</p>
+</li>
+</ul>
+<p>The overall voltage gain of cascaded amplifiers is the product of the
+individual voltage gains. <span class="arithmatex">\(<span class="arithmatex">\(A_v = A_{v1}A_{v2}A_{v3} \cdots A_{vn}\)</span>\)</span>
+where <span class="arithmatex">\(n\)</span> is the number of stages, as previously described in
+<a href="#bjt_multistage"></a>. The process of solving them is still the same as
+shown before, but the equations you use differ as you are now using
+MOSFET instead of BJT.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Current Mirrors As a recap, a current mirror is
+a circuit designed to copy a current through one active device by
+controlling the current in another active device of a circuit.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Diode-Connected MOSFET In MOSFET, we have
+something very similar to the diode-connected BJT, where the drain and
+gate are tied together.</p>
+<p>::: center
+<img alt="image" src="../Figure/5/diode_mosfet1.png" width="\textwidth" />
+:::</p>
+<p>When a wire is connected between the drain and gate, the diode <span class="arithmatex">\(D_2\)</span> is
+short-circuited. As a result, the entire circuit functions like a diode
+<span class="arithmatex">\(D_1\)</span>.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/5/mosfet_diode1.png" />
+:::</p>
+<p>Looking into the circuit, the input resistance is simply the resistance
+of the diode <span class="arithmatex">\(D_1\)</span>, which is: <span class="arithmatex">\(<span class="arithmatex">\(R_{in} \approx \frac{1}{g_m}\)</span>\)</span> Thus, a
+diode-connected MOSFET synthesizes a resistor of low resistance.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Analysis of Current Mirror without
+Base-Width Modulation Let's now look at a MOSFET current mirror. Refer
+to the circuit below.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/mosfet_mirror1.png" />
+:::</p>
+<p>Since the drain and gate are connected, the MOSFET operates in
+saturation region, because <span class="arithmatex">\(<span class="arithmatex">\(v_D = v_G\)</span>\)</span> Therefore, we can say
+<span class="arithmatex">\(<span class="arithmatex">\(v_{DS} \geq v_{GS} - V_T\)</span>\)</span> From , if we neglect <span class="arithmatex">\(r_o\)</span>, then the drain
+current is given by:
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS1} \approx \frac{1}{2}\mu_nC_{ox}\bigg(\frac{W}{L}\bigg)_1(v_{GS1} - V_T)^2\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS2} \approx \frac{1}{2}\mu_nC_{ox}\bigg(\frac{W}{L}\bigg)_2(v_{GS2} - V_T)^2\)</span>\)</span>
+and by dividing both equations we have
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS2} = \frac{(W/L)_2}{(W/L)_1}i_{DS1}\)</span>\)</span> If <span class="arithmatex">\(M_1\)</span> and <span class="arithmatex">\(M_2\)</span> are
+identical, such that <span class="arithmatex">\((W/L)_1 = (W/L)_2\)</span>, then it functions as current
+mirror as <span class="arithmatex">\(i_{DS1} = i_{DS2}\)</span>. By adjusting the <span class="arithmatex">\(W/L\)</span> ratio, it becomes
+a current amplifier.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Analysis of Current Mirror with Base-Width
+Modulation Let's now consider the impact of base-width modulation <span class="arithmatex">\(r_o\)</span>.
+When accounted for, the circuit can be depicted as:</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/mosfet_mirror2.png" />
+:::</p>
+<p>Now the equation for drain current becomes
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS1} \approx \frac{1}{2}\mu_nC_{ox}\bigg(\frac{W}{L}\bigg)_1(v_{GS1} - V_T)^2(1 + \lambda v_{DS1})\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS2} \approx \frac{1}{2}\mu_nC_{ox}\bigg(\frac{W}{L}\bigg)_2(v_{GS2} - V_T)^2(1 + \lambda v_{DS2})\)</span>\)</span>
+and by dividing both equations we have
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{i_{DS2}}{i_{DS1}} = \frac{(W/L)_2}{(W/L)_1}\bigg(\frac{1 + \lambda v_{DS1}}{1 + \lambda v_{DS2}}\bigg)\)</span>\)</span>
+Note that we cannot determine the current ratio simply by <span class="arithmatex">\(W/L\)</span> alone,
+as it introduces an uncertainty, since <span class="arithmatex">\(v_{DS1} \neq v_{DS2}\)</span>. If we let
+<span class="arithmatex">\(<span class="arithmatex">\(v_{DS1} = v_{DS} \hspace{2cm} v_{DS2} = v_{DS} + \Delta v_{DS}\)</span>\)</span> where
+<span class="arithmatex">\(\Delta v_{DS}\)</span> is the difference in voltage between <span class="arithmatex">\(v_{DS1}\)</span> and
+<span class="arithmatex">\(v_{DS2}\)</span>. As you can see, the current ratio is directly proportional to
+<span class="arithmatex">\(\Delta v_{DS}\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(\Delta\bigg(\frac{i_{DS2}}{i_{DS1}}\bigg) = \frac{(W/L)_2}{(W/L)_1}\bigg(\frac{\lambda\Delta v_{DS}}{1 + \lambda v_{DS}}\bigg)\)</span>\)</span>
+So in order to produce a very accurate current mirror, you must reduce
+<span class="arithmatex">\(\Delta v_{DS}\)</span>.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Current Sinks and Current Sources The
+purpose of current mirrors is to construct current sources and current
+sinks from a master current source whose value is stable---independent
+of temperature and supply voltage fluctuations.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/5/mosfet_mirror3.png" />
+:::</p>
+<p>Solving them are fairly straightforward, as the currents are set by the
+ratio of transistor size, specifically the area of the emitter <span class="arithmatex">\(W/L\)</span>.</p>
+<p>For example, we have a two-stage CS amplifier. The circuit is denoted in
+black and the current sources and sinks are in blue.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/5/mosfet_mirror4.png" />
+:::</p>
+<p>Given <span class="arithmatex">\(J\)</span>, then <span class="arithmatex">\(i_{DS1} = J\)</span>. the current sinks are:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\displaystyle i_{DS2} = \frac{(W/L)_2}{(W/L)_1}J\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle i_{DS7} = \frac{(W/L)_7}{(W/L)_1}J\)</span></p>
+</li>
+</ul>
+<p>Given <span class="arithmatex">\(i_{DS2} = i_{SD3}\)</span>, the current sources are:</p>
+<ul>
+<li><span class="arithmatex">\(\displaystyle i_{SD4} = \frac{(W/L)_4}{(W/L)_3}I_{SD3} = \frac{(W/L)_4}{(W/L)_3}\frac{(W/L)_2}{(W/L)_1}J\)</span></li>
+</ul>
+<p>Finally, the current flowing through the circuit:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\displaystyle i_{DS5} = i_{SD4}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle i_{SD6} = i_{DS7}\)</span></p>
+</li>
+</ul>
+<h1 id="differential-mosfet-voltage-amplifiers">Differential MOSFET Voltage Amplifiers<a class="headerlink" href="#differential-mosfet-voltage-amplifiers" title="Permanent link">&para;</a></h1>
+<p>-4ex -1ex -.4ex 1ex .2ex Introduction As the name suggests, the
+differential amplifier amplifies the difference between two input
+signals (or the differential input signal). They are useful for
+suppressing noise, as the supply voltage is generally not constant.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/6/supply_noise.png" />
+<img alt="image" height="4cm" src="../Figure/6/loadline1.png" />
+:::</p>
+<p>Its fluctuation is known as supply voltage noise, which affects the load
+line subsequently the DC operating point. Varying DC operating point
+causes <span class="arithmatex">\(g_m\)</span> to vary, resulting in varying <span class="arithmatex">\(v_{out}\)</span> not caused by
+<span class="arithmatex">\(v_{in}\)</span>.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/6/loadline2.png" />
+:::</p>
+<p>In other words, if there is noise in the supply voltage, then it will
+also get coupled with the output signal. Therefore, the output of the
+amplifier that you design should be insensitive to supply voltage noise,
+ground noise, and the fluctuation of the input of the amplifier.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Single-Ended Signaling The amplifiers we
+have encountered so far are single-ended amplifiers, which amplifies a
+single input signal.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/6/single_signal.png" />
+:::</p>
+<p>Signals are represented by nodal voltages with reference to a constant
+voltage, typically the ground. And as we demonstrated earlier,
+single-ended signaling is much more susceptible to noise.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Differential Amplifiers Thus, we introduce
+differential signaling.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/6/diff_signal2.png" />
+:::</p>
+<p>Compared to single-ended signaling, signals are represented by the
+difference between two single-ended nodal voltages. It's consists of a
+DC component <span class="arithmatex">\(v_{in,\, cm}\)</span> and AC components <span class="arithmatex">\(v_{in,\, AC}^+\)</span> and
+<span class="arithmatex">\(v_{in,\, AC}^-\)</span>, where
+<span class="arithmatex">\(<span class="arithmatex">\(v_{in}^+ = v_{in,\, AC}^+ + v_{in,\, cm} \hspace{2cm} v_{in}^- = v_{in,\, AC}^- + v_{in,\, cm}\)</span>\)</span>
+You can think of <span class="arithmatex">\(v_{in,\, cm}\)</span> as our DC biasing voltage of the input
+transistors of the differential amplifier.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex NMOS Differential Pair It consists of a
+pair of identical common-source amplifiers with the source of the input
+transistors <span class="arithmatex">\(M_2\)</span> and <span class="arithmatex">\(M_3\)</span> tied together.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/diff_amp1.png" />
+:::</p>
+<p>As you can see <span class="arithmatex">\(V_{b2}\)</span> acts as our DC biasing voltage (or
+<span class="arithmatex">\(v_{in,\,cm}\)</span>) and the AC component <span class="arithmatex">\(v_{in}^+\)</span>, <span class="arithmatex">\(v_{in}^-\)</span>.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/6/diff_signal3.png" />
+:::</p>
+<p>The transistors <span class="arithmatex">\(M_4\)</span> and <span class="arithmatex">\(M_5\)</span> function as constant current-source
+load, which if you recall from the previous module are used in place of
+a resistor load.</p>
+<p>Though, one component you may not be particular familiar with is the
+transistor <span class="arithmatex">\(M_1\)</span>, located at the source of the CS amplifier. <span class="arithmatex">\(M_1\)</span> forms
+the tail current source of constant current <span class="arithmatex">\(I_{SS}\)</span>, where
+<span class="arithmatex">\(<span class="arithmatex">\(\label{eq:nmos_tailcurrent}
+    I_{DS2} = I_{DS3} = \frac{I_{SS}}{2}\)</span>\)</span> The purpose of the tail
+current source is to split that difference between the two sides of the
+amplifier. As shown from the equation above, <span class="arithmatex">\(I_{SS}\)</span> is split evenly
+between <span class="arithmatex">\(M_2\)</span> and <span class="arithmatex">\(M_3\)</span>.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex PMOS Differential Pair Suppose we use PMOS
+as the input transistor.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/diff_amp2.png" />
+:::</p>
+<p>Similar to NMOS, <span class="arithmatex">\(V_{b2}\)</span> makes up the DC component and <span class="arithmatex">\(v_{in}^+\)</span>,
+<span class="arithmatex">\(v_{in}^-\)</span> which make up the AC components.</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/6/diff_signal3.png" />
+:::</p>
+<p>The transistor <span class="arithmatex">\(M_1\)</span> now forms the head current source of constant
+current <span class="arithmatex">\(I_{SS}\)</span>. Similar to tail current source, it is designed to
+split that difference between the two sides of the amplifier.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Differential Voltage Gain Now let's go over how
+voltage is amplified in a differential amplifier. Using the principle of
+superposition, we can express the differential signaling as such</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/6/diff_signal1.png" />
+:::</p>
+<p>The differential input is <span class="arithmatex">\(<span class="arithmatex">\(v_{in} = v_{in}^+ - v_{in}^-\)</span>\)</span> where it is
+made up of two signals <span class="arithmatex">\(180^\circ\)</span> out of phase
+<span class="arithmatex">\(<span class="arithmatex">\(v_{in}^+ = \frac{v_s}{2} + V_{b2} \hspace{2cm} v_{in}^- = -\frac{v_s}{2} + V_{b2}\)</span>\)</span>
+The differential output is <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:diff_output}
+    v_o = v_o^+ - v_o^-\)</span>\)</span> which we can derive from the small-signal
+equivalent circuit.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Small-Signal Equivalent Circuit For
+reference, the circuit below is an NMOS differential pair.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/6/diff_amp3.png" />
+:::</p>
+<p>By performing KVL, where <span class="arithmatex">\(V_{SS}\)</span> is the node voltage of <span class="arithmatex">\(SS\)</span> then
+<span class="arithmatex">\(<span class="arithmatex">\(V_{b2} = V_{GS2,3} + V_{SS} \qquad\text{ or }\qquad V_{GS2,3} = V_{b2} - V_{SS}\)</span>\)</span>
+Recall the equation for transconductance (in ), then we can express
+<span class="arithmatex">\(g_{m2,3}\)</span> as
+<span class="arithmatex">\(<span class="arithmatex">\(g_{m2,3} = \frac{2I_{DS2,3}}{\underbrace{V_{b2} - V_{SS}}_{V_{GS2,3}} - V_T}\)</span>\)</span>
+Now we'll separate our DC and AC components of the differential
+amplifier.</p>
+<p>::: center
+<img alt="image" height="6cm" src="../Figure/6/diff_equiv1.png" />
+:::</p>
+<p>The <span class="arithmatex">\(I_{SS}/2\)</span> represents our DC current, which we already know from and
+. The <span class="arithmatex">\(\Delta i\)</span> represents our AC current. Then, the current of <span class="arithmatex">\(M_2\)</span>
+and <span class="arithmatex">\(M_3\)</span> is
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS2} = \frac{I_{SS}}{2} + \Delta i \hspace{2cm} i_{DS3} = \frac{I_{SS}}{2} - \Delta i\)</span>\)</span>
+If you remember, a transconductor maps a voltage to a current. So in AC,
+we're mapping the <span class="arithmatex">\(v_s/2\)</span> to <span class="arithmatex">\(\Delta i\)</span>, which we can say
+<span class="arithmatex">\(<span class="arithmatex">\(\Delta i = g_{m2,3}\bigg(\frac{v_s}{2}\bigg)\)</span>\)</span> If we perform KCL at
+the node <span class="arithmatex">\(SS\)</span>, then the current flowing through <span class="arithmatex">\(M_1\)</span> is constant.
+<span class="arithmatex">\(<span class="arithmatex">\(i_{DS1} = i_{DS2} + i_{DS3} = I_{SS}\)</span>\)</span> It is independent of the input
+source, that is <span class="arithmatex">\(v_s\)</span>, or in other words, it is constantcurrent doesn't
+change. This means we can turn the node <span class="arithmatex">\(SS\)</span> into an AC ground.</p>
+<p>::: center
+<img alt="image" height="6cm" src="../Figure/6/diff_equiv2.png" />
+:::</p>
+<p>So in small-signal analysis, the differential amplifier can be split
+into two identical common-source amplifiers whose AC outputs are given
+by <span class="arithmatex">\(<span class="arithmatex">\(v_o^+ = g_{m3}(r_{o3} \parallel r_{o5})\bigg(-\frac{v_s}{2}\bigg)\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(v_o^- = g_{m2}(r_{o2} \parallel r_{o4})\bigg(\frac{v_s}{2}\bigg)\)</span>\)</span>
+Note that <span class="arithmatex">\(g_{m2} = g_{m3}\)</span> and <span class="arithmatex">\(r_{o2,3} = r_{o4,5}\)</span>. From , the
+differential output is
+<span class="arithmatex">\(<span class="arithmatex">\(v_o = v_o^+ - v_o^- = g_{m2,3}(r_{o2,3} \parallel r_{o4,5})v_s\)</span>\)</span> where
+the voltage gain is
+<span class="arithmatex">\(<span class="arithmatex">\(A_v = \frac{v_o}{v_i}\times\frac{v_s}{v_i} = g_{m2}(r_{o2} \parallel r_{o4}) = g_{m3}(r_{o3} \parallel r_{o5})\)</span>\)</span>
+Notice it has the same voltage gain as that of corresponding
+common-source amplifier (in ). It doesn't provide any additional gain,
+which might not make sense at first.</p>
+<p>But what this provides is a way to deal with supply voltage noise,
+without having to worry about the gain being modified for using
+differential signaling.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Power Consumption This, however, comes at
+the cost of uses twice the power consumption. Since the voltage gain is
+the same, under the condition that the both transistors have the same
+transconductance <span class="arithmatex">\(<span class="arithmatex">\(g_{m} = \frac{2I_{DS}}{{V_{b2} - V_{SS}} - V_T}\)</span>\)</span>
+Then the current <span class="arithmatex">\(I_{DS}\)</span> of each branch of the differential pair, <span class="arithmatex">\(M_2\)</span>
+and <span class="arithmatex">\(M_3\)</span>, must be the same as that of CS amplifier.</p>
+<p>::: center
+<img alt="image" height="6cm" src="../Figure/6/diff_equiv3.png" />
+:::</p>
+<p>Therefore, the tail current of the differential pair is twice that of
+the DC current of CS amplifier. As result, the power consumption of
+differential part is <span class="arithmatex">\(2\times\)</span> that of CS amplifier.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Differential-Input Single-Ended-Output
+Amplifiers In most scenarios, we only want one output <span class="arithmatex">\(v_o\)</span>, instead of
+two outputs <span class="arithmatex">\(v_o^+\)</span> and <span class="arithmatex">\(v_o^-\)</span>. So how can we modify the differential
+amplifier to do such task?</p>
+<p>::: center
+<img alt="image" height="2.5cm" src="../Figure/6/diff_signal4.png" />
+:::</p>
+<p>It is pretty simple, which involves using a current mirror to perform
+differential-to-single ended conversion.</p>
+<p>::: center
+<img alt="image" height="6cm" src="../Figure/6/diff_equiv4.png" />
+:::</p>
+<p>The output current is
+<span class="arithmatex">\(<span class="arithmatex">\(i_o = 2 \times g_m\bigg(\frac{v_s}{2}\bigg) = g_mv_s\)</span>\)</span> and the output
+voltage is
+<span class="arithmatex">\(<span class="arithmatex">\(v_o = (r_{o3} \parallel r_{o5})i_o = g_m(r_{o3} \parallel r_{o5})v_s\)</span>\)</span>
+As you can see, we have a non-inverting amplifier with the same voltage
+gain as that of the differential-input differential-output amplifier.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Rejection of Supply Noise Let's now go over the
+process of rejecting noise from the supply voltage. We can represent the
+supply voltage as <span class="arithmatex">\(V_{DD} +  v_{dd}\)</span>, where <span class="arithmatex">\(v_{dd} \ll V_{DD}\)</span>
+represents the supply voltage noise.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/diff_noise1.png" />
+:::</p>
+<p>Our goal is to know whether the differential output of the differential
+pair is affected by <span class="arithmatex">\(v_{dd}\)</span> or not. We'll first look at a
+differential-input differential-output amplifierstwo inputs and two
+outputs.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/6/diff_equiv5.png" />
+:::</p>
+<p>You might have notice we also short-circuited <span class="arithmatex">\(v_s/2\)</span>, even though it's
+not constant. The purpose is that we are only interested in the response
+of the amplifier due to <span class="arithmatex">\(v_{dd}\)</span>.</p>
+<p>Performing KCL at the output nodes <span class="arithmatex">\(v_o^+\)</span> and <span class="arithmatex">\(v_o^-\)</span> results in
+<span class="arithmatex">\(<span class="arithmatex">\(v_o^+ \approx g_{m5}(r_{o3} \parallel r_{o5})v_{dd}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(v_o^- \approx g_{m4}(r_{o2} \parallel r_{o4})v_{dd}\)</span>\)</span> As you can see,
+the output voltages are a function of the supply voltage noise <span class="arithmatex">\(v_{dd}\)</span>.
+However, when we calculate the differential output
+<span class="arithmatex">\(<span class="arithmatex">\(v_o = v_o^+ - v_o^- = 0\)</span>\)</span> It is <span class="arithmatex">\(0\)</span>, which means the differential
+output is insensitive to supply voltage noise. You can refer to the
+diagram below.</p>
+<p>::: center
+<img alt="image" height="2.9cm" src="../Figure/6/ex_noise1.png" />
+:::</p>
+<p>When there's noise, it's gonna look the same on both output voltages.
+And so when we compare the two output voltages, <span class="arithmatex">\(v_o = v_o^+ - v_o^-\)</span>,
+the noise will cancels each other out.</p>
+<p>::: center
+<img alt="image" height="2.65cm" src="../Figure/6/ex_noise2.png" />
+:::</p>
+<p>Now let's look at a differential-input single-ended-output amplifierstwo
+inputs and one outputs.</p>
+<p>::: center
+<img alt="image" height="4.75cm" src="../Figure/6/diff_equiv6.png" />
+:::</p>
+<p>As we covered in the previous section, we can modify the differential
+amplifier, such that there is only one output, but comes at a cost. If
+we perform KCL and node <span class="arithmatex">\(A\)</span> and node <span class="arithmatex">\(B\)</span>, we can derive the single-ended
+output voltage
+<span class="arithmatex">\(<span class="arithmatex">\(v_o = \frac{g_{m5}v_A + g_{o5}v_{dd}}{g_{m5} + g_{o3} + g_{o5}}\)</span>\)</span> Then
+<span class="arithmatex">\(v_o\)</span> is a function of the <span class="arithmatex">\(v_{dd}\)</span>, meaning that differential-input
+single-ended output amplifiers cannot reject voltage noise.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Ground Noise As of now we only covered
+noise coming from supply voltage, but there's also noise coming from the
+ground, that is caused by improper grounding such as a large resistance
+of ground rails.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/6/diff_noise2.png" />
+:::</p>
+<p>When a noise-current enters the ground rail, the potential of the ground
+rail is no longer at <span class="arithmatex">\(\SI{0}{\volt}\)</span>fluctuating from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(v_{ss}\)</span>,
+where <span class="arithmatex">\(v_{ss}\)</span> is typically tens of <span class="arithmatex">\(\si{\milli\volt}\)</span>.</p>
+<p>Using small-signal analysis, we can find the output voltage of the
+differential pair caused by <span class="arithmatex">\(v_{ss}\)</span>.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/6/diff_equiv7.png" />
+:::</p>
+<p>Performing KCL at the output nodes <span class="arithmatex">\(v_o^+\)</span> and <span class="arithmatex">\(v_o^-\)</span> results in
+<span class="arithmatex">\(<span class="arithmatex">\(v_o^+ \approx g_{m3}(r_{o3} \parallel r_{o5})v_{ss}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(v_o^- \approx g_{m2}(r_{o2} \parallel r_{o4})v_{ss}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(v_o = v_o^+ - v_o^- = 0\)</span>\)</span> As with supply voltage noise, the output is
+also insensitive to ground noise.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Common-Mode Referring to the diagram below, we
+mentioned previously, <span class="arithmatex">\(v_{in,\,cm}\)</span> and <span class="arithmatex">\(v_{o,\,cm}\)</span> depicts the DC
+operating point, whereas <span class="arithmatex">\(v_{in,\,AC}^{+,-}\)</span> and <span class="arithmatex">\(v_{o,\,AC}^{+,-}\)</span>
+carry the information.</p>
+<p>::: center
+<img alt="image" height="2.75cm" src="../Figure/6/diff_signal5.png" />
+:::</p>
+<p>Ideally, we want the common-mode input <span class="arithmatex">\(v_{in,\,cm}\)</span> to be stable, as it
+provides the DC biasing voltage. However, that is something we have no
+control over, so instead we should design our differential amplifier to
+be insensitive to <span class="arithmatex">\(v_{in,\,cm}\)</span> fluctuations.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Common-Mode Voltage Gain The common-mode
+voltage gain is defined as
+<span class="arithmatex">\(<span class="arithmatex">\(A_{v,\,cm} = \frac{v_{o,\,cm}}{v_{in,\,cm}}\)</span>\)</span> which can be obtained by
+applying both <span class="arithmatex">\(v_{in,\,cm}\)</span> to both inputs and measuring either ends of
+the single-ended outputs of the differential pair, shown below.</p>
+<p>::: center
+<img alt="image" height="2.25cm" src="../Figure/6/diff_equiv8.png" />
+:::</p>
+<p>Ideally, we prefer a common-mode voltage gain <span class="arithmatex">\(A_{v,\,cm}\)</span> of <span class="arithmatex">\(0\)</span>, which
+means there's zero fluctuations from the input to output. Similar to
+what we did with voltage noise, we will perform small-signal analysis.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/6/diff_equiv9.png" />
+:::</p>
+<p>A few things to make note of:</p>
+<ul>
+<li>
+<p>Consider <span class="arithmatex">\(r_{o1}\)</span> as the result of two resistors, <span class="arithmatex">\(2r_{o1}\)</span>, to be
+    connected in parallel.</p>
+</li>
+<li>
+<p>Then we have that node <span class="arithmatex">\(SS1\)</span> and node <span class="arithmatex">\(SS2\)</span> to be identical, such
+    that no current flows in between the nodes, since they have same
+    voltages, <span class="arithmatex">\(v_{SS2} - v_{SS1} = 0\)</span>.</p>
+</li>
+<li>
+<p>Therefore, we can separate it, forming two sub-circuits, that can be
+    identified as a common-source amplifier with source degeneration.</p>
+</li>
+</ul>
+<p>From , we can modify it to obtain the common-mode voltage gain, that is
+<span class="arithmatex">\(<span class="arithmatex">\(A_{v,\,cm} \approx \frac{-g_{m2,3}(r_{o2} \parallel r_{o4})}{1 + g_{m2,3}(2r_{o1})}\)</span>\)</span>
+In order to have a <span class="arithmatex">\(A_{v,\,cm} \approx 0\)</span>, the denominator must be very
+large. In other words, <span class="arithmatex">\(r_{o1}\)</span> forms source degeneration and
+significantly lowers <span class="arithmatex">\(A_{v,\,cm}\)</span>.</p>
+<p>::: list</p>
+<p>Note that <span class="arithmatex">\(r_{o1}\)</span> has no impact on the differential voltage gain.
+:::</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Voltage Gain Comparison To expand a bit
+more on the final bit, one of the reason for using a tail current source
+(or head current source for PMOS) is to reduce the common-mode voltage
+gain. In technicality, we can choose to not add it, as it is indeed
+optional.</p>
+<p>::: center
+<img alt="image" height="5cm" src="../Figure/6/diff_amp4.png" />
+:::</p>
+<p>Both amplifiers still have the same differential voltage gain. However,
+the circuit on the left will have a larger common-mode voltage gain. If
+<span class="arithmatex">\(v_{in,\,cm}\)</span> fluctuates, in turn, the circuit's input and output will
+fluctuate significantly as well.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex CMRR This is one of the parameters we use
+quantify amplifiers. We won't go much in-depth regarding this topic, but
+a good amplifier should have:</p>
+<ol>
+<li>
+<p>a large differential-mode voltage gain <span class="arithmatex">\(A_{v,\,\text{diff}}\)</span>, and
+    ...</p>
+</li>
+<li>
+<p>a small common-mode voltage gain <span class="arithmatex">\(A_{v,\,cm}\)</span>.</p>
+</li>
+</ol>
+<p>CMRR stands for common-mode rejection ratio which is
+<span class="arithmatex">\(<span class="arithmatex">\(\text{CMRR} = 20\log{\bigg(\frac{A_{v,\,\text{diff}}}{A_{v,\,cm}}\bigg)}\)</span>\)</span>
+A typically value is around <span class="arithmatex">\(\SI{80}{\decibel}\)</span>.</p>
+<p>-4ex -1ex -.4ex 1ex .2ex Mismatch In the design stage, we always assume
+that the two branches of a differential amplifier to be completely
+identical</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/diff_amp5.png" />
+:::</p>
+<p>such that:</p>
+<ul>
+<li>
+<p>Load match: <span class="arithmatex">\(R_{D1} = R_{D2} = R_D\)</span></p>
+</li>
+<li>
+<p>Dimensions match: <span class="arithmatex">\((W/L)_1 = (W/L)_2 = (W/L)\)</span></p>
+</li>
+<li>
+<p>Threshold voltage match: <span class="arithmatex">\(V_{T1} = V_{T2} = V_T\)</span></p>
+</li>
+</ul>
+<p>However, by the time the circuit is fabricated, you will see that they
+are different. This is due to the fabrication process uncertainties
+which give rise to mismatch between the branches.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/diff_amp6.png" />
+:::</p>
+<p>While it is not possible to get rid of the mismatch, our goal is to
+minimize the impact it has on our circuit. We always assume the
+worst-case:</p>
+<ul>
+<li>
+<p>Worst-case load mismatch: <span class="arithmatex">\(\pm\Delta R_D\)</span></p>
+</li>
+<li>
+<p>Worst-case dimension mismatch: <span class="arithmatex">\(\pm\Delta (W/L)\)</span></p>
+</li>
+<li>
+<p>Worst-case threshold mismatch: <span class="arithmatex">\(\pm\Delta V_T\)</span></p>
+</li>
+</ul>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Load Mismatch To calculate the load
+mismatch, we assume the worst-case, so let <span class="arithmatex">\(R_{D1} = R_D + \Delta R_D\)</span>
+and <span class="arithmatex">\(R_{D2} = R_D - \Delta R_D\)</span> with no other mismatch. Then apply a
+common-mode voltage <span class="arithmatex">\(v_{in,\,cm}\)</span> to both inputs.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/load_mismatch.png" />
+:::</p>
+<p>Performing KVL, the output nodes <span class="arithmatex">\(v_o^+\)</span> and <span class="arithmatex">\(v_o^-\)</span> are
+<span class="arithmatex">\(<span class="arithmatex">\(v_o^+ = V_{DD} - (R_D - \Delta R_D)i_{DS}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(v_o^- = V_{DD} - (R_D + \Delta R_D)i_{DS}\)</span>\)</span> then the differential
+output is
+<span class="arithmatex">\(<span class="arithmatex">\(v_{o,\,\text{diff},\,R_D} = v_o^+ - v_o^- = 2i_{DS}\Delta R_D\)</span>\)</span> The
+output offset voltage caused by load mismatch is proportional to
+<span class="arithmatex">\(\Delta R_D\)</span>.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Dimension Mismatch Similarly, to calculate
+the dimension mismatch, let <span class="arithmatex">\((W/L)_2 = (W/L) + \Delta (W/L)\)</span> and
+<span class="arithmatex">\((W/L)_3 = (W/L) - \Delta (W/L)\)</span> with no other mismatch. Apply
+<span class="arithmatex">\(v_{in,\,cm}\)</span> to both inputs.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/dim_mismatch.png" />
+:::</p>
+<p>The differential output is
+<span class="arithmatex">\(<span class="arithmatex">\(v_{o,\,\text{diff},W/L} = v_o^+ - v_o^- = -2R_DI_{DS}\bigg[\frac{\Delta (W/L)}{(W/L)}\bigg]\)</span>\)</span>
+The output offset voltage caused by dimension mismatch is inversely
+proportional. This means that if we want to reduce the dimension
+mismatch, we need to increase <span class="arithmatex">\((W/L)\)</span>.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Threshold Voltage Mismatch Lastly, we have
+the threshold voltage mismatch. As usual, let
+<span class="arithmatex">\(V_{T2} = V_T + \Delta V_T\)</span> and <span class="arithmatex">\(V_{T3} = V_T - \Delta V_T\)</span> with no
+other mismatch and apply <span class="arithmatex">\(v_{in,\,cm}\)</span> to both inputs.</p>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/thres_mismatch.png" />
+:::</p>
+<p>The differential output is
+<span class="arithmatex">\(<span class="arithmatex">\(v_{o,\,\text{diff},\,V_T} = v_o^+ - v_o^- = -4k_n \frac{W}{L}(V_{in,\,cm} - V_{SS} - V_T)\Delta V_T\)</span>\)</span>
+The output offset voltage caused by threshold voltage mismatch is
+proportional to <span class="arithmatex">\(\Delta V_T\)</span>.</p>
+<p>-3ex -0.1ex -.4ex 0.5ex .2ex Offset Voltage The load mismatch, dimension
+mismatch, and threshold voltage mismatch are uncorrelated. Therefore,
+the total mismatch-induced output offset voltage is obtained from
+<span class="arithmatex">\(<span class="arithmatex">\(v_{os,\,\text{output}} = \sqrt{v_{o,\,\text{diff},\,R_D}^2 + v_{o,\,\text{diff},W/L}^2 + v_{o,\,\text{diff},\,V_T}^2}\)</span>\)</span>
+The mismatch results in a non-zero output voltage,
+<span class="arithmatex">\(v_{os,\,\text{output}} \neq 0\)</span>. In circuit analysis, we always want to
+bring this all the way back to the input, such that we can make
+comparisons at the input.</p>
+<p>::: center
+<img alt="image" height="2.75cm" src="../Figure/6/diff_equiv10.png" />
+:::</p>
+<p>The way we do this, is by attaching an artificial input offset voltage
+source <span class="arithmatex">\(v_{os,\,input}\)</span> which we can be calculate via dividing by
+differential voltage gain
+<span class="arithmatex">\(<span class="arithmatex">\(v_{os,\,input} = \frac{v_{os,\,output}}{A_{v,\,\text{diff}}}\)</span>\)</span>
+Typically, it is placed at the non-inverting input of the amplifier
+<span class="arithmatex">\(v_{in}^+\)</span>. We will use a technique called auto-zeroing to remove the
+impact of <span class="arithmatex">\(v_{os,\,input}\)</span>.</p>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Virtual Short Characteristics Before going
+over the technique, we must understand what exactly is a virtual short.</p>
+<p>::: center
+<img alt="image" height="3cm" src="../Figure/6/virtual_short.png" />
+:::</p>
+<p>It refers to a condition of a differential input amplifier, in which its
+non-inverting and inverting inputs have almost the same voltage
+<span class="arithmatex">\(<span class="arithmatex">\(v_{in}^+ = v_{in}^-\)</span>\)</span> There's two conditions to be met:</p>
+<ol>
+<li>
+<p>They form a negative feedback, <span class="arithmatex">\(v_o^+\)</span> and <span class="arithmatex">\(v_o^-\)</span> are connected to
+    <span class="arithmatex">\(v_{in}^-\)</span> and <span class="arithmatex">\(v_{in}^+\)</span> respectivelypositive to negative and
+    vice-versa.</p>
+</li>
+<li>
+<p>The differential voltage gain <span class="arithmatex">\(A_{v,\,\text{diff}}\)</span> is sufficiently
+    large.</p>
+</li>
+</ol>
+<p>-2ex -0.1ex -.2ex .2ex .2ex Auto-Zeroing Technique To demonstrate the
+auto-zeroing, we have switches that are controlled by the input signal.</p>
+<ul>
+<li>
+<p>When <span class="arithmatex">\(\phi = 1\)</span>, we have a virtual short, where <span class="arithmatex">\(v^+ = v^-\)</span>, and the
+    capacitor is charged to <span class="arithmatex">\(v_{os}\)</span> with polarity shown.</p>
+</li>
+<li>
+<p>When <span class="arithmatex">\(\phi = 0\)</span>, it does some magic and the voltage of the capacitor
+    cancels out <span class="arithmatex">\(v_{os}\)</span>. Then poof, the offset voltage goes bye bye.</p>
+</li>
+</ul>
+<p>::: center
+<img alt="image" height="4cm" src="../Figure/6/auto_zero.png" />
+:::</p>
+<p>Some remarks:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(v_{os}\)</span> needs to remain unchanged during both <span class="arithmatex">\(\phi = 0\)</span> and
+    <span class="arithmatex">\(\phi 1\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(v_o\)</span> is not available during <span class="arithmatex">\(\phi = 1\)</span>.</p>
+</li>
+<li>
+<p>Switches are implemented using MOSFET.</p>
+</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../MTH314/MTH314/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MTH314" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              MTH314
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Jasper Cruz
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/jsprcrz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jasper-cruz" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
