@@ -20,7 +20,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    logo: fontawesome/solid/earth-americas
+    logo: material/book-open-page-variant
     repo: fontawesome/brands/github
   features:
     - navigation.top
@@ -39,17 +39,37 @@ extra:
     property: G-SR44P16LQ4
   generator: true
 
+extra_css:
+  - css/katex.css
+  - css/custom.css
+  - https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 copyright: Jasper Cruz
 
 markdown_extensions:
+  - toc:
+      permalink: true
+  - abbr
+  - tables
+  - def_list
+  - attr_list
+  - md_in_html
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.highlight:
       linenums: true
       linenums_style: pymdownx-inline
-  - toc:
-      permalink: true
-  - pymdownx.superfences
-  - abbr
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
 
 plugins:
   - search
@@ -62,3 +82,7 @@ nav:
       - Winter 2022: "Term/W2022.md"
       - Fall 2021: "Term/F2021.md"
       - Winter 2021: "Term/W2021.md"
+  # - Notes:
+  #     - Winter 2022:
+  #         - COE428: "W2022/COE428/COE428.md"
+  #         - MTH314: "W2022/MTH314/MTH314.md"
