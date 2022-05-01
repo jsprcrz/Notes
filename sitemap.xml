@@ -2,37 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsprcrz.github.io/Notes/</loc>
-         <lastmod>2022-04-17</lastmod>
+         <lastmod>2022-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsprcrz.github.io/Notes/Term/F2021/</loc>
-         <lastmod>2022-04-17</lastmod>
+         <lastmod>2022-05-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsprcrz.github.io/Notes/Term/S2022/</loc>
+         <lastmod>2022-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsprcrz.github.io/Notes/Term/W2021/</loc>
-         <lastmod>2022-04-17</lastmod>
+         <lastmod>2022-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsprcrz.github.io/Notes/Term/W2022/</loc>
-         <lastmod>2022-04-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jsprcrz.github.io/Notes/W2022/COE428/COE428/</loc>
-         <lastmod>2022-04-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jsprcrz.github.io/Notes/W2022/ELE404/ELE404/</loc>
-         <lastmod>2022-04-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jsprcrz.github.io/Notes/W2022/MTH314/MTH314/</loc>
-         <lastmod>2022-04-17</lastmod>
+         <lastmod>2022-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
