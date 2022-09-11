@@ -80,6 +80,7 @@ plugins:
 nav:
   - Preface: "index.md"
   - PDF:
+      - Fall 2022: "Term/F2022.md"
       - Spring 2022: "Term/S2022.md"
       - Winter 2022: "Term/W2022.md"
       - Fall 2021: "Term/F2021.md"
