@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a>
     <img src="https://www.ontariouniversitiesinfo.ca/assets/files/images/universityLogoLarge_tmu-vertical-formerly-rgb-01.png" alt="Logo">
   </a>
 
