@@ -7,7 +7,7 @@
   <h3 align="center">Notes</h3>
 
   <p align="center">
-    A collection of study notes that I have taken during my time at Ryerson University
+    A collection of study notes that I have taken during my time at university
     <br />
     <a href="https://jsprcrz.github.io/Notes"><strong>Explore the site »</strong></a>
     <br />
@@ -19,6 +19,11 @@
 
 These notes are meant to be a helpful resource for myself and other students who are taking similar courses. The notes are written using LaTeX (with [The Legrand Orange Book Template](https://www.latextemplates.com/template/legrand-orange-book)) and Notion. Keep in mind some of the notes are left uncompleted.
 
+<p align="center">
+  <img src="https://imgur.com/D7Xrcv5.png" alt="Homepage" style="height: 275px;">
+</p>
+
+The site is built using Vite, React and Tailwind CSS for a sleek and responsive design. Additionally, the site uses some additional npm packages, such as React Rough Notation, to create and animate annotations on a web page.
 
 ## Courses
 The courses covered include:
