@@ -39,7 +39,7 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/folders/1m1VvGRq5xHxAZDvvptQ5YtUIwFxSt8Kb",
+            link: "https://drive.google.com/drive/folders/10suYrFQe7BG28A9ahuF3ByM8GdnEMHIR",
           },
           {
             name: "Notion",
