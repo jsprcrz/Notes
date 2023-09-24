@@ -2,6 +2,88 @@ import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 
 export const courseInfo = [
   {
+    id: "fall-2023",
+    title: "Fall 2023",
+    courses: [
+      {
+        code: "COE758",
+        name: "Digital Systems Engineering",
+        links: [
+          {
+            name: "Google Drive",
+            link: "https://drive.google.com/drive/folders/16ECH1Bf3KE5CwLxYB-Aqw2IDKRxCjnJQ",
+          },
+          {
+            name: "Notion",
+            link: "https://jaspercruz.notion.site/COE758-Notes-2e8a856962924f4397cc6b3d6774d397",
+          },
+        ],
+      },
+      {
+        code: "COE768",
+        name: "Computer Networks",
+        links: [
+          {
+            name: "Google Drive",
+            link: "https://drive.google.com/drive/folders/1yzjQkKwL1nntYshKdAO5AI81BOxfSNxp",
+          },
+          {
+            name: "Notion",
+            link: "https://jaspercruz.notion.site/COE768-Notes-e1a7c78ed0e3419aba2519a4b1c72375",
+          },
+        ],
+      },
+      {
+        code: "CPS714",
+        name: "Software Project Management",
+        links: [
+          {
+            name: "Google Drive",
+            link: "https://drive.google.com/drive/folders/1m1VvGRq5xHxAZDvvptQ5YtUIwFxSt8Kb",
+          },
+          {
+            name: "Notion",
+            link: "https://jaspercruz.notion.site/CPS714-Notes-1da1529537904eeeb3c95a2a22442648",
+          },
+        ],
+      },
+      {
+        code: "CPS843",
+        name: "Intro to Computer Vision",
+        links: [
+          {
+            name: "Google Drive",
+            link: "https://drive.google.com/drive/folders/1NNrpMrkwnPJ59U-eOkJ0qH71QvSdoob0",
+          },
+          {
+            name: "Notion",
+            link: "https://jaspercruz.notion.site/CPS843-Notes-157ca992fcc3479bbac5cd2d0dc2d4c1",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "spring-2023",
+    title: "Spring 2023",
+    courses: [
+      {
+        code: "ELE888",
+        name: "Intelligent Systems",
+        links: [
+          {
+            name: "Google Drive",
+            link: "https://drive.google.com/drive/folders/1m1VvGRq5xHxAZDvvptQ5YtUIwFxSt8Kb",
+          },
+          {
+            name: "Notion",
+            link: "https://jaspercruz.notion.site/ELE888-Notes-a05ebe4c26544adbadb3d4fb37e36ce4",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "spring-2023",
     title: "Spring 2023",
     courses: [
