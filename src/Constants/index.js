@@ -148,28 +148,6 @@ export const courseInfo = [
     ],
   },
   {
-    id: "spring-2023",
-    title: "Spring 2023",
-    courses: [
-      {
-        code: "ELE888",
-        name: "Intelligent Systems",
-        links: [
-          {
-            name: "Google Drive",
-            link:
-              "https://drive.google.com/drive/folders/1m1VvGRq5xHxAZDvvptQ5YtUIwFxSt8Kb",
-          },
-          {
-            name: "Notion",
-            link:
-              "https://jaspercruz.notion.site/ELE888-Notes-a05ebe4c26544adbadb3d4fb37e36ce4",
-          },
-        ],
-      },
-    ],
-  },
-  {
     id: "winter-2023",
     title: "Winter 2023",
     courses: [
