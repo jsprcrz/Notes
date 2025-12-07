@@ -12,10 +12,13 @@
     <a href="https://jsprcrz.github.io/Notes"><strong>Explore the site »</strong></a>
     <br />
     <br />
+    <a href="https://www.buymeacoffee.com/jaspercruz"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jaspercruz&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
+    <br />
+    <br />
   </p>
 </div>
 
-## About 
+## About
 
 These notes are meant to be a helpful resource for myself and other students who are taking similar courses. The notes are written using LaTeX (with [The Legrand Orange Book Template](https://www.latextemplates.com/template/legrand-orange-book)) and Notion. Keep in mind some of the notes are left uncompleted.
 
@@ -26,6 +29,7 @@ These notes are meant to be a helpful resource for myself and other students who
 The site is built using Vite, React and Tailwind CSS for a sleek and responsive design. Additionally, the site uses some additional npm packages, such as React Rough Notation, to create and animate annotations on a web page.
 
 ## Courses
+
 The courses covered include:
 
 <ul>
@@ -91,4 +95,3 @@ The courses covered include:
     </ul>
     </li>
 </ul>
-
