@@ -12,9 +12,9 @@
     <a href="https://jsprcrz.github.io/Notes"><strong>Explore the site »</strong></a>
     <br />
     <br />
-    <a href="https://www.buymeacoffee.com/jaspercruz"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jaspercruz&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
+    <a href="https://www.buymeacoffee.com/jaspercruz"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="40" /></a>
     <br />
-    <br />
+
   </p>
 </div>
 
@@ -31,27 +31,6 @@ The site is built using Vite, React and Tailwind CSS for a sleek and responsive 
 ## Courses
 
 The courses covered include:
-
-<ul>
-    <li>Winter 2024
-    <ul>
-        <li>COE817 Network Security</li>
-        <li>COE891 Software Testing and QA</li>
-        <li>COE892 Distributed Cloud Computing</li>
-    </ul>
-    </li>
-</ul>
-
-<ul>
-    <li>Fall 2023
-    <ul>
-        <li>COE758 Digital Systems Engineering</li>
-        <li>COE768 Computer Networks</li>
-        <li>CPS714 Software Project Management</li>
-        <li>CPS843 Intro to Computer Vision</li>
-    </ul>
-    </li>
-</ul>
 
 <ul>
     <li> Winter 2023
