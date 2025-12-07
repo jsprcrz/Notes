@@ -2,6 +2,60 @@ import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 
 export const courseInfo = [
   {
+    id: "winter-2024",
+    title: "Winter 2024",
+    courses: [
+      {
+        code: "COE817",
+        name: "Network Security",
+        links: [
+          {
+            name: "Google Drive",
+            link:
+              "https://drive.google.com/drive/folders/1vRoJ9qX5BgPKeuA-iCxjin0szExc-F_a",
+          },
+          {
+            name: "Notion",
+            link:
+              "https://jaspercruz.notion.site/COE817-Notes-e1062bea26324b3a89174918838e98c5",
+          },
+        ],
+      },
+      {
+        code: "COE891",
+        name: "Software Testing and QA",
+        links: [
+          {
+            name: "Google Drive",
+            link:
+              "https://drive.google.com/drive/folders/15UjDBRhTbnVgsGMDhPCFHA2a1hrWYTUx",
+          },
+          {
+            name: "Notion",
+            link:
+              "https://jaspercruz.notion.site/COE891-Notes-a63115a40c0c48da9d233c474cc90f82",
+          },
+        ],
+      },
+      {
+        code: "COE892",
+        name: "Distributed Cloud Computing",
+        links: [
+          {
+            name: "Google Drive",
+            link:
+              "https://drive.google.com/drive/folders/1zOIXfEAjo78kU3ApeCaIsmgkZH67gTGk",
+          },
+          {
+            name: "Notion",
+            link:
+              "https://jaspercruz.notion.site/COE892-Notes-08d25284e4b743c4a8dbcf835d62b2d8",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "fall-2023",
     title: "Fall 2023",
     courses: [
@@ -11,11 +65,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/folders/16ECH1Bf3KE5CwLxYB-Aqw2IDKRxCjnJQ",
+            link:
+              "https://drive.google.com/drive/folders/16ECH1Bf3KE5CwLxYB-Aqw2IDKRxCjnJQ",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE758-Notes-2e8a856962924f4397cc6b3d6774d397",
+            link:
+              "https://jaspercruz.notion.site/COE758-Notes-2e8a856962924f4397cc6b3d6774d397",
           },
         ],
       },
@@ -25,11 +81,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/folders/1yzjQkKwL1nntYshKdAO5AI81BOxfSNxp",
+            link:
+              "https://drive.google.com/drive/folders/1yzjQkKwL1nntYshKdAO5AI81BOxfSNxp",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE768-Notes-e1a7c78ed0e3419aba2519a4b1c72375",
+            link:
+              "https://jaspercruz.notion.site/COE768-Notes-e1a7c78ed0e3419aba2519a4b1c72375",
           },
         ],
       },
@@ -39,11 +97,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/folders/10suYrFQe7BG28A9ahuF3ByM8GdnEMHIR",
+            link:
+              "https://drive.google.com/drive/folders/10suYrFQe7BG28A9ahuF3ByM8GdnEMHIR",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/CPS714-Notes-1da1529537904eeeb3c95a2a22442648",
+            link:
+              "https://jaspercruz.notion.site/CPS714-Notes-1da1529537904eeeb3c95a2a22442648",
           },
         ],
       },
@@ -53,11 +113,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/folders/1NNrpMrkwnPJ59U-eOkJ0qH71QvSdoob0",
+            link:
+              "https://drive.google.com/drive/folders/1NNrpMrkwnPJ59U-eOkJ0qH71QvSdoob0",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/CPS843-Notes-157ca992fcc3479bbac5cd2d0dc2d4c1",
+            link:
+              "https://jaspercruz.notion.site/CPS843-Notes-157ca992fcc3479bbac5cd2d0dc2d4c1",
           },
         ],
       },
@@ -73,11 +135,17 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/folders/1m1VvGRq5xHxAZDvvptQ5YtUIwFxSt8Kb",
+            link:
+              "https://drive.google.com/drive/folders/1m1VvGRq5xHxAZDvvptQ5YtUIwFxSt8Kb",
           },
           {
             name: "Notion",
+<<<<<<< HEAD
             link: "https://jaspercruz.notion.site/ELE888-Notes-a05ebe4c26544adbadb3d4fb37e36ce4",
+=======
+            link:
+              "https://jaspercruz.notion.site/ELE888-Notes-a05ebe4c26544adbadb3d4fb37e36ce4",
+>>>>>>> c37c6dbe03b6b28f8df91a6a17f04eb9d3347eb5
           },
         ],
       },
@@ -93,11 +161,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1095HA0tGRoQUwYaIe6IKYWCDTScgyzWU",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1095HA0tGRoQUwYaIe6IKYWCDTScgyzWU",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE608-Notes-7072f36a53e744ab894531b9c9e53d2d",
+            link:
+              "https://jaspercruz.notion.site/COE608-Notes-7072f36a53e744ab894531b9c9e53d2d",
           },
         ],
       },
@@ -107,11 +177,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1a1a0yHvYQoBJkvGoOMXPoTcEfuMxSH63",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1a1a0yHvYQoBJkvGoOMXPoTcEfuMxSH63",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE628-Notes-6d039db53fcf40a1b29f885e1947a6b3",
+            link:
+              "https://jaspercruz.notion.site/COE628-Notes-6d039db53fcf40a1b29f885e1947a6b3",
           },
         ],
       },
@@ -121,11 +193,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1nwO8GV_u-7RaBhev3zlkEYXojwkaqwZM",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1nwO8GV_u-7RaBhev3zlkEYXojwkaqwZM",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE691-Notes-1b8f54e175cd40b0bc79a6fbc9720e7d",
+            link:
+              "https://jaspercruz.notion.site/COE691-Notes-1b8f54e175cd40b0bc79a6fbc9720e7d",
           },
         ],
       },
@@ -135,11 +209,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1L711UYgyhJQttJkHohy_3esI7Zp3KOo2",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1L711UYgyhJQttJkHohy_3esI7Zp3KOo2",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE692-Notes-0df8b360037044fcaacae44df0801740",
+            link:
+              "https://jaspercruz.notion.site/COE692-Notes-0df8b360037044fcaacae44df0801740",
           },
         ],
       },
@@ -149,11 +225,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1imJ-hrLY63vZB11hrxqKo2NElVNrNhOr",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1imJ-hrLY63vZB11hrxqKo2NElVNrNhOr",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/CPS688-Notes-7d06c0e764d24a51aed143581f8a74cf",
+            link:
+              "https://jaspercruz.notion.site/CPS688-Notes-7d06c0e764d24a51aed143581f8a74cf",
           },
         ],
       },
@@ -169,11 +247,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1vbvpIrIEnl7WJL_z28SEuZXUzMvBariO",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1vbvpIrIEnl7WJL_z28SEuZXUzMvBariO",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE538-Notes-cd377de804c94f6192cfe2795424bad1",
+            link:
+              "https://jaspercruz.notion.site/COE538-Notes-cd377de804c94f6192cfe2795424bad1",
           },
         ],
       },
@@ -183,11 +263,13 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1QyIWHFB3uyqUO1JR8LlSGad-Vgl2Sem2",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1QyIWHFB3uyqUO1JR8LlSGad-Vgl2Sem2",
           },
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/CPS510-Notes-bbfe493c055443c3b6ed4e86a856567c",
+            link:
+              "https://jaspercruz.notion.site/CPS510-Notes-bbfe493c055443c3b6ed4e86a856567c",
           },
         ],
       },
@@ -197,7 +279,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1rzr4uq83hE1DTPFJ6-5yQzRQEm7grIKz",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1rzr4uq83hE1DTPFJ6-5yQzRQEm7grIKz",
           },
         ],
       },
@@ -207,7 +290,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1EMD93Z9f9PWsAc-N-GSAg1CDraR7rmyL",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1EMD93Z9f9PWsAc-N-GSAg1CDraR7rmyL",
           },
         ],
       },
@@ -223,7 +307,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1QKhNuGVqy1bSqbzAFi-rWtEXY8z7evQA",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1QKhNuGVqy1bSqbzAFi-rWtEXY8z7evQA",
           },
         ],
       },
@@ -239,7 +324,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1qwHKZ7plwaf-MtfQFO9dSegSHFcHeZL_",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1qwHKZ7plwaf-MtfQFO9dSegSHFcHeZL_",
           },
         ],
       },
@@ -249,7 +335,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/16qljCfxIers3zMQh3k81Azh-CfW5Su3B",
+            link:
+              "https://drive.google.com/drive/u/1/folders/16qljCfxIers3zMQh3k81Azh-CfW5Su3B",
           },
         ],
       },
@@ -259,7 +346,8 @@ export const courseInfo = [
         links: [
           {
             name: "Notion",
-            link: "https://jaspercruz.notion.site/COE528-Notes-8ed3b757539e441491ed64f63bd988fd",
+            link:
+              "https://jaspercruz.notion.site/COE528-Notes-8ed3b757539e441491ed64f63bd988fd",
           },
         ],
       },
@@ -269,7 +357,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/17rZMsYkNy6L1NgTILAucwixd7f8JztLj",
+            link:
+              "https://drive.google.com/drive/u/1/folders/17rZMsYkNy6L1NgTILAucwixd7f8JztLj",
           },
         ],
       },
@@ -285,7 +374,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/19LmBonwIsPpFOl8e-4LEyu9p8quQBDyf",
+            link:
+              "https://drive.google.com/drive/u/1/folders/19LmBonwIsPpFOl8e-4LEyu9p8quQBDyf",
           },
         ],
       },
@@ -295,7 +385,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1V7XAbBDBcdMsjrvYwnu1dbPXtfpbimEp",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1V7XAbBDBcdMsjrvYwnu1dbPXtfpbimEp",
           },
         ],
       },
@@ -305,7 +396,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1zLpoSLXQ6wbGE6bsbmTsks_fDEtNSbZU",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1zLpoSLXQ6wbGE6bsbmTsks_fDEtNSbZU",
           },
         ],
       },
@@ -315,7 +407,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1fbuvJ2OzbYCaQcRKkNcWf6e-37evOWxH",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1fbuvJ2OzbYCaQcRKkNcWf6e-37evOWxH",
           },
         ],
       },
@@ -331,7 +424,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1j4xRE21v9c1XBtPMCxpJ0b5sja49ju7P",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1j4xRE21v9c1XBtPMCxpJ0b5sja49ju7P",
           },
         ],
       },
@@ -341,7 +435,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1TWaqWmWCSPa5UOQ_RHM36Jwih-wbtAUQ",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1TWaqWmWCSPa5UOQ_RHM36Jwih-wbtAUQ",
           },
         ],
       },
@@ -351,7 +446,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1VmhpYLCiC1hQPkHT08oKrXpwd4W-vAOj",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1VmhpYLCiC1hQPkHT08oKrXpwd4W-vAOj",
           },
         ],
       },
@@ -361,7 +457,8 @@ export const courseInfo = [
         links: [
           {
             name: "Google Drive",
-            link: "https://drive.google.com/drive/u/1/folders/1QWzfYPasvcXaBmywVKITHEkNLSMiAS5V",
+            link:
+              "https://drive.google.com/drive/u/1/folders/1QWzfYPasvcXaBmywVKITHEkNLSMiAS5V",
           },
         ],
       },

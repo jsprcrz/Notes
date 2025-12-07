@@ -33,6 +33,27 @@ The site is built using Vite, React and Tailwind CSS for a sleek and responsive 
 The courses covered include:
 
 <ul>
+    <li>Winter 2024
+    <ul>
+        <li>COE817 Network Security</li>
+        <li>COE891 Software Testing and QA</li>
+        <li>COE892 Distributed Cloud Computing</li>
+    </ul>
+    </li>
+</ul>
+
+<ul>
+    <li>Fall 2023
+    <ul>
+        <li>COE758 Digital Systems Engineering</li>
+        <li>COE768 Computer Networks</li>
+        <li>CPS714 Software Project Management</li>
+        <li>CPS843 Intro to Computer Vision</li>
+    </ul>
+    </li>
+</ul>
+
+<ul>
     <li> Winter 2023
     <ul>
         <li>COE608 Computer Organization and Architecture</li>
